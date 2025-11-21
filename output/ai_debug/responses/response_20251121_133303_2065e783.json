@@ -1,0 +1,40 @@
+{
+  "request_id": "20251121_133303_2065e783",
+  "timestamp": "2025-11-21T13:33:13.357529",
+  "result": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "[K] hospital_name | คลินิกแพทย์ศิรินนท์  \n[K] receipt_no | 004  \n[K] receipt_date | 5 มค 2565  \n[K] patient_name | ณชมน มเผา  \n[K] hn | -  \n[K] vn | -  \n[K] policyno | -  \n[K] total_amount_in_writing | 150  \n[K] an | -  \n[K] cashier_name | ภยักร  \n[K] visit_date | -  \n[K] patient_signature | -  \n[K] cashier_signature | -  \n[L1] 150 | ค่ายา | 150 | - | 150  \n[L3] 1 ผู้รับเงิน | 1 | 150 | - | 150",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1763706793,
+    "id": "chatcmpl-MskAscwSdhtXtyBJBfN1xRyXDcraVSzq",
+    "model": "qwen3-instruct-2507",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 181,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "draft_tokens": 0,
+      "draft_tokens_acceptance": 0.0,
+      "prompt_tokens": 586,
+      "prompt_tokens_details": {
+        "cached_tokens": 8
+      },
+      "prompt_tokens_per_second": 398.554322410043,
+      "time_per_output_token_ms": 44.30452486187845,
+      "time_to_first_token_ms": 1470.314,
+      "tokens_per_second": 22.571057992779508,
+      "total_tokens": 767
+    }
+  },
+  "content": "[K] hospital_name | คลินิกแพทย์ศิรินนท์  \n[K] receipt_no | 004  \n[K] receipt_date | 5 มค 2565  \n[K] patient_name | ณชมน มเผา  \n[K] hn | -  \n[K] vn | -  \n[K] policyno | -  \n[K] total_amount_in_writing | 150  \n[K] an | -  \n[K] cashier_name | ภยักร  \n[K] visit_date | -  \n[K] patient_signature | -  \n[K] cashier_signature | -  \n[L1] 150 | ค่ายา | 150 | - | 150  \n[L3] 1 ผู้รับเงิน | 1 | 150 | - | 150"
+}

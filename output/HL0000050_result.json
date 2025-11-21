@@ -1,0 +1,69 @@
+{
+  "documents": [
+    {
+      "document_info": [
+        {
+          "code": "hospital_name",
+          "type": "string",
+          "value": "คลินิกแพทย์ศิรินนท์",
+          "accuracyRate": null
+        },
+        {
+          "code": "hn",
+          "type": "string",
+          "value": "123456",
+          "accuracyRate": null
+        },
+        {
+          "code": "admission_date",
+          "type": "date",
+          "value": "2022-01-05",
+          "accuracyRate": null
+        },
+        {
+          "code": "gross_amount",
+          "type": "decimal",
+          "value": "150.00",
+          "accuracyRate": null
+        },
+        {
+          "code": "order_items",
+          "type": "array",
+          "value": [
+            {
+              "value": [
+                {
+                  "code": "item_id",
+                  "type": "string",
+                  "value": "1",
+                  "accuracyRate": null,
+                  "page": "1"
+                },
+                {
+                  "code": "item_desc",
+                  "type": "string",
+                  "value": "ค่ายา",
+                  "accuracyRate": null,
+                  "page": "1"
+                },
+                {
+                  "code": "item_amont",
+                  "type": "decimal",
+                  "value": "150.00",
+                  "accuracyRate": null,
+                  "page": "1"
+                }
+              ]
+            }
+          ],
+          "accuracyRate": null
+        }
+      ],
+      "document_code": "HL0000050",
+      "document_type": "Medical Receipt",
+      "page": "1",
+      "total_page": "1"
+    }
+  ],
+  "transaction_no": "TX1763706373295"
+}

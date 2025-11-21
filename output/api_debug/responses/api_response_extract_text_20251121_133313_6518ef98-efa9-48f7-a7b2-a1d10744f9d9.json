@@ -1,0 +1,228 @@
+{
+  "endpoint": "/extract/text",
+  "timestamp": "2025-11-21T13:33:13.359566",
+  "request_id": "6518ef98-efa9-48f7-a7b2-a1d10744f9d9",
+  "request_meta": {
+    "form_id": "HL0000050",
+    "ocr_texts_count": 1,
+    "mode": "simplified"
+  },
+  "response": {
+    "success": true,
+    "data": {
+      "documents": [
+        {
+          "page": "1",
+          "total_page": "1",
+          "document_code": "HL0000050",
+          "document_info": [
+            {
+              "code": "hospital_name",
+              "page": null,
+              "type": "string",
+              "value": "คลินิกแพทย์ศิรินนท์",
+              "accuracyRate": null
+            },
+            {
+              "code": "hn",
+              "page": null,
+              "type": "string",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "vn",
+              "page": null,
+              "type": "string",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "receipt_date",
+              "page": null,
+              "type": "date",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "receipt_no",
+              "page": null,
+              "type": "string",
+              "value": "004",
+              "accuracyRate": null
+            },
+            {
+              "code": "patient_name",
+              "page": null,
+              "type": "string",
+              "value": "ณชมน มเผา",
+              "accuracyRate": null
+            },
+            {
+              "code": "age",
+              "page": null,
+              "type": "decimal",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "treatment_date",
+              "page": null,
+              "type": "date",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "policyno",
+              "page": null,
+              "type": "string",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "total_amount_in_writing",
+              "page": null,
+              "type": "string",
+              "value": "150",
+              "accuracyRate": null
+            },
+            {
+              "code": "an",
+              "page": null,
+              "type": "string",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "cashier_name",
+              "page": null,
+              "type": "string",
+              "value": "ภยักร",
+              "accuracyRate": null
+            },
+            {
+              "code": "visit_date",
+              "page": null,
+              "type": "date",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "patient_signature",
+              "page": null,
+              "type": "string",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "cashier_signature",
+              "page": null,
+              "type": "string",
+              "value": "-",
+              "accuracyRate": null
+            },
+            {
+              "code": "billing_items",
+              "page": "",
+              "type": "array",
+              "value": [
+                {
+                  "code": "billing_item",
+                  "page": "",
+                  "type": "array",
+                  "value": [
+                    {
+                      "code": "billing_code",
+                      "page": "1",
+                      "type": "string",
+                      "value": "-",
+                      "accuracyRate": null
+                    },
+                    {
+                      "code": "billing_desc",
+                      "page": "1",
+                      "type": "string",
+                      "value": "ค่ายา",
+                      "accuracyRate": null
+                    },
+                    {
+                      "code": "item_level",
+                      "page": "1",
+                      "type": "integer",
+                      "value": "1",
+                      "accuracyRate": null
+                    },
+                    {
+                      "code": "amount",
+                      "page": "1",
+                      "type": "decimal",
+                      "value": "150.00",
+                      "accuracyRate": null
+                    },
+                    {
+                      "code": "discount",
+                      "page": "1",
+                      "type": "decimal",
+                      "value": "0.00",
+                      "accuracyRate": null
+                    },
+                    {
+                      "code": "net_amount",
+                      "page": "1",
+                      "type": "decimal",
+                      "value": "150.00",
+                      "accuracyRate": null
+                    },
+                    {
+                      "code": "grouporder_items",
+                      "page": "",
+                      "type": "array",
+                      "value": []
+                    }
+                  ],
+                  "accuracyRate": null
+                }
+              ],
+              "accuracyRate": null
+            }
+          ],
+          "document_type": "Receipt-Bill",
+          "need_correction": false
+        }
+      ],
+      "transaction_no": "TX1763706793358",
+      "summary": {
+        "fields_present": [
+          "age",
+          "an",
+          "cashier_name",
+          "cashier_signature",
+          "hn",
+          "hospital_name",
+          "patient_name",
+          "patient_signature",
+          "policyno",
+          "receipt_date",
+          "receipt_no",
+          "total_amount_in_writing",
+          "treatment_date",
+          "visit_date",
+          "vn"
+        ],
+        "fields_missing_expected": [
+          "admission_date",
+          "gross_amount",
+          "invoice_no",
+          "date_of_issue"
+        ],
+        "billing_items_count": 1
+      }
+    },
+    "error": null,
+    "timing": {
+      "processing_method": 0.0,
+      "ai_extraction_time": 0.0
+    },
+    "request_id": "6518ef98-efa9-48f7-a7b2-a1d10744f9d9"
+  }
+}

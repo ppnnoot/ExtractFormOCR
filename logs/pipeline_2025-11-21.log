@@ -144,3 +144,395 @@
 2025-11-21 11:30:47,600 - ai_simple_extraction - INFO - ✅ Built 1 hierarchical billing items from template
 2025-11-21 11:30:47,601 - api_server - INFO - ✅ JSON formatting completed
 2025-11-21 11:30:47,603 - api_server - INFO - 📝 API response saved: ./output/api_debug/responses/api_response_extract_text_20251121_113047_7bae9c22-1f92-4e17-9b65-83d0698659fb.json
+2025-11-21 11:57:37,016 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000050
+2025-11-21 11:57:37,019 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000050
+2025-11-21 11:57:37,020 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 11:57:37,020 - template_api_manager - DEBUG - Cache hit for formId: HL0000050
+2025-11-21 11:57:37,020 - template_api_manager - INFO - Template loaded from cache: HL0000050
+2025-11-21 11:57:37,020 - api_server - INFO - Template loaded: Receipt-Bill (Form ID: HL0000050)
+2025-11-21 11:57:37,020 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-21 11:57:37,021 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 11:57:37,021 - template_api_manager - DEBUG - Cache hit for formId: HL0000050
+2025-11-21 11:57:37,021 - template_api_manager - INFO - Template loaded from cache: HL0000050
+2025-11-21 11:57:37,022 - ai_simple_extraction - INFO - 📊 OCR text stats: 4 non-empty lines, 559 characters
+2025-11-21 11:57:37,025 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests/request_20251121_115737_e6b4ca65.json
+2025-11-21 11:57:37,026 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-21 11:57:37,029 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-21 11:57:44,180 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 1008
+2025-11-21 11:57:44,207 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses/response_20251121_115737_e6b4ca65.json
+2025-11-21 11:57:44,207 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | คลินิกแพทย์ศิรินนท์  
+[K] receipt_no | 004  
+[K] receipt_date | 5 มค 2565  
+[K] patient_name | ณชมน มเผา  
+[K] total_amount_in_writing | 150  
+[K] cashier_name | ภยักร  
+[L1] 1.1.1 | ค่ายา | 150 | - | 150  
+[L3] ฉยับ | 1 | 150 | - | 150
+2025-11-21 11:57:44,208 - ai_simple_extraction - INFO - ✅ Parsed 1 billing items + 1 order items = 2 total items
+2025-11-21 11:57:44,208 - ai_simple_extraction - INFO - 📊 Extraction ratio: 50.0% (2/4 lines)
+2025-11-21 11:57:44,208 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 2 total items (50.0%), 6 other fields
+2025-11-21 11:57:44,208 - api_server - INFO - ✅ AI extraction completed: 1 billing items extracted
+2025-11-21 11:57:44,208 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-21 11:57:44,208 - ai_simple_extraction - INFO - Using document_code from template API: HL0000050
+2025-11-21 11:57:44,208 - ai_simple_extraction - INFO - Using document_type from template API: Receipt-Bill
+2025-11-21 11:57:44,208 - ai_simple_extraction - INFO - Using template_structure parsed from API
+2025-11-21 11:57:44,209 - ai_simple_extraction - INFO - 📋 Template structure loaded: {
+  "documents": [
+    {
+      "page": "",
+      "total_page": "",
+      "document_code": "HL0000050",
+      "document_info": [
+        {
+          "code": "hospital_name",
+          "page": null,
+          "type": "string",
+          "value": null,
+          "accuracyRate": null
+        },
+        {
+          "code": "hn",
+          "page": null,
+          "type": "string",
+          "value": null,
+          "accuracyRate": null
+        },
+        {
+          "code": "vn",
+          "page": nul...
+2025-11-21 11:57:44,209 - ai_simple_extraction - INFO - 📋 Template has 16 document_info fields
+2025-11-21 11:57:44,209 - ai_simple_extraction - INFO - 📋 Billing items template structure: 1 template items
+2025-11-21 11:57:44,209 - ai_simple_extraction - INFO - 📋 First billing item template: {
+  "code": "billing_item",
+  "page": "",
+  "type": "array",
+  "value": [
+    {
+      "code": "billing_code",
+      "page": "",
+      "type": "string",
+      "value": "",
+      "accuracyRate": null
+    },
+    {
+      "code": "billing_desc",
+      "page": "",
+      "type": "string",
+      "value": ""...
+2025-11-21 11:57:44,210 - ai_simple_extraction - INFO - Building billing items: extracted_count=1, template_count=1
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 150
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: -
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 150
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-21 11:57:44,210 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ฉยับ
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 150
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: -
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 150
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ฉยับ
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 150
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: -
+2025-11-21 11:57:44,211 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 150
+2025-11-21 11:57:44,211 - ai_simple_extraction - INFO - ✅ Built 1 hierarchical billing items from template
+2025-11-21 11:57:44,211 - api_server - INFO - ✅ JSON formatting completed
+2025-11-21 11:57:44,215 - api_server - INFO - 📝 API response saved: ./output/api_debug/responses/api_response_extract_text_20251121_115744_565c11e6-17c4-4f26-b4c6-e59d892397d1.json
+2025-11-21 13:27:21,872 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000050
+2025-11-21 13:27:21,874 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000050
+2025-11-21 13:27:21,875 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 13:27:21,875 - template_api_manager - DEBUG - Cache expired for formId: HL0000050
+2025-11-21 13:27:21,875 - template_api_manager - INFO - Fetching template from API: HL0000050 (attempt 1/3)
+2025-11-21 13:27:21,876 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-21 13:27:22,373 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-21 13:27:22,377 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-21 13:27:22,377 - template_api_manager - INFO - Template fetched successfully: HL0000050
+2025-11-21 13:27:22,377 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-21 13:27:22,380 - template_api_manager - DEBUG - Cached template for formId: HL0000050
+2025-11-21 13:27:22,380 - api_server - INFO - Template loaded: Receipt-Bill (Form ID: HL0000050)
+2025-11-21 13:27:22,381 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-21 13:27:22,381 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 13:27:22,381 - template_api_manager - DEBUG - Cache expired for formId: HL0000050
+2025-11-21 13:27:22,381 - template_api_manager - INFO - Fetching template from API: HL0000050 (attempt 1/3)
+2025-11-21 13:27:22,383 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-21 13:27:22,613 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-21 13:27:22,615 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-21 13:27:22,615 - template_api_manager - INFO - Template fetched successfully: HL0000050
+2025-11-21 13:27:22,615 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-21 13:27:22,617 - template_api_manager - DEBUG - Cached template for formId: HL0000050
+2025-11-21 13:27:22,617 - ai_simple_extraction - INFO - 📊 OCR text stats: 4 non-empty lines, 559 characters
+2025-11-21 13:27:22,619 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests/request_20251121_132722_444831e3.json
+2025-11-21 13:27:22,619 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-21 13:27:22,620 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-21 13:27:31,608 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 1021
+2025-11-21 13:27:31,801 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses/response_20251121_132722_444831e3.json
+2025-11-21 13:27:31,801 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | คลินิกแพทย์ศิรินนท์  
+[K] receipt_no | 004  
+[K] receipt_date | 5 มค 2565  
+[K] patient_name | ณชมน มเผา  
+[K] total_amount_in_writing | 150  
+[K] cashier_name | ภยักร  
+[L1] 1.1.1 | ค่ายา | 150 | - | 150  
+[L3] 150 กับฉยับ | 1 | 150 | - | 150
+2025-11-21 13:27:31,801 - ai_simple_extraction - INFO - ✅ Parsed 1 billing items + 1 order items = 2 total items
+2025-11-21 13:27:31,801 - ai_simple_extraction - INFO - 📊 Extraction ratio: 50.0% (2/4 lines)
+2025-11-21 13:27:31,801 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 2 total items (50.0%), 6 other fields
+2025-11-21 13:27:31,802 - api_server - INFO - ✅ AI extraction completed: 1 billing items extracted
+2025-11-21 13:27:31,802 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-21 13:27:31,802 - ai_simple_extraction - INFO - Using document_code from template API: HL0000050
+2025-11-21 13:27:31,802 - ai_simple_extraction - INFO - Using document_type from template API: Receipt-Bill
+2025-11-21 13:27:31,802 - ai_simple_extraction - INFO - Using template_structure parsed from API
+2025-11-21 13:27:31,802 - ai_simple_extraction - INFO - 📋 Template structure loaded: {
+  "documents": [
+    {
+      "page": "",
+      "total_page": "",
+      "document_code": "HL0000050",
+      "document_info": [
+        {
+          "code": "hospital_name",
+          "page": null,
+          "type": "string",
+          "value": null,
+          "accuracyRate": null
+        },
+        {
+          "code": "hn",
+          "page": null,
+          "type": "string",
+          "value": null,
+          "accuracyRate": null
+        },
+        {
+          "code": "vn",
+          "page": nul...
+2025-11-21 13:27:31,802 - ai_simple_extraction - INFO - 📋 Template has 16 document_info fields
+2025-11-21 13:27:31,802 - ai_simple_extraction - INFO - 📋 Billing items template structure: 1 template items
+2025-11-21 13:27:31,802 - ai_simple_extraction - INFO - 📋 First billing item template: {
+  "code": "billing_item",
+  "page": "",
+  "type": "array",
+  "value": [
+    {
+      "code": "billing_code",
+      "page": "",
+      "type": "string",
+      "value": "",
+      "accuracyRate": null
+    },
+    {
+      "code": "billing_desc",
+      "page": "",
+      "type": "string",
+      "value": ""...
+2025-11-21 13:27:31,803 - ai_simple_extraction - INFO - Building billing items: extracted_count=1, template_count=1
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 150
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: -
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 150
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-21 13:27:31,803 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: 150 กับฉยับ
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 150
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: -
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 150
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: 150 กับฉยับ
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 150
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: -
+2025-11-21 13:27:31,804 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 150
+2025-11-21 13:27:31,804 - ai_simple_extraction - INFO - ✅ Built 1 hierarchical billing items from template
+2025-11-21 13:27:31,804 - api_server - INFO - ✅ JSON formatting completed
+2025-11-21 13:27:31,805 - api_server - INFO - 📝 API response saved: ./output/api_debug/responses/api_response_extract_text_20251121_132731_ab2a5961-e25b-44e1-9586-695be02a94eb.json
+2025-11-21 13:31:39,467 - security_module - INFO - SECURITY: SYSTEM_SHUTDOWN - {'timestamp': '2025-11-21T13:31:39.467643'}
+2025-11-21 13:31:51,332 - api_server - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-21 13:31:51,332 - api_server - INFO - 📁 Log directory: ./logs
+2025-11-21 13:31:51,332 - api_server - INFO - 📅 Max retention: 30 days
+2025-11-21 13:31:51,342 - api_server - INFO - Initializing components in lifespan...
+2025-11-21 13:31:51,342 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-21 13:31:51,342 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-21 13:31:51,342 - multi_ocr_adapter - INFO - Initialized OCR engines: ['oneocr']
+2025-11-21 13:31:51,342 - api_server - INFO - Two-Step AI Pipeline initialized successfully
+2025-11-21 13:31:51,342 - multi_ocr_adapter - INFO - Initialized OCR engines: ['oneocr']
+2025-11-21 13:31:51,342 - api_server - INFO - Multi-OCR Manager initialized: ['oneocr']
+2025-11-21 13:31:51,342 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-21 13:31:51,342 - document_classifier - INFO - Loading document types from Template API...
+2025-11-21 13:31:51,342 - template_api_manager - INFO - Fetching all templates from API
+2025-11-21 13:31:51,343 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-21 13:31:51,586 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-21 13:31:51,588 - template_api_manager - DEBUG - Parsed template: HL0000055 - Statement from Hospital
+2025-11-21 13:31:51,588 - template_api_manager - DEBUG - Parsed template: HL0000043 - Other medical document
+2025-11-21 13:31:51,588 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-21 13:31:51,588 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-21 13:31:51,588 - template_api_manager - DEBUG - Parsed template: HL0000051 - E-Receipt
+2025-11-21 13:31:51,588 - template_api_manager - DEBUG - Parsed template: HL0000054 - Estimate Medical Expense report, GOP, guarantee email
+2025-11-21 13:31:51,589 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-21 13:31:51,589 - template_api_manager - INFO - Fetched 7 templates from API
+2025-11-21 13:31:51,592 - document_classifier - INFO - Loaded 7 document types from API: ['B07_STATEMENT', 'HL0000043_UNKNOWN', 'B05_HOSPITAL_DETAIL', 'B01_RECEIPT', 'HL0000051_UNKNOWN', 'B06_ESTIMATE_GOP', 'B04_INVOICE']
+2025-11-21 13:31:51,592 - api_server - INFO - Document Classifier initialized successfully
+2025-11-21 13:31:51,592 - api_server - INFO - Authentication Manager initialized successfully
+2025-11-21 13:31:51,592 - security_module - INFO - SECURITY: SYSTEM_STARTUP - {'timestamp': '2025-11-21T13:31:51.592621'}
+2025-11-21 13:32:12,450 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000050
+2025-11-21 13:32:12,451 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000050
+2025-11-21 13:32:12,451 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 13:32:12,451 - template_api_manager - INFO - Fetching template from API: HL0000050 (attempt 1/3)
+2025-11-21 13:32:12,455 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-21 13:32:12,865 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-21 13:32:12,868 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-21 13:32:12,868 - template_api_manager - INFO - Template fetched successfully: HL0000050
+2025-11-21 13:32:12,868 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-21 13:32:12,872 - template_api_manager - DEBUG - Cached template for formId: HL0000050
+2025-11-21 13:32:12,872 - api_server - INFO - Template loaded: Receipt-Bill (Form ID: HL0000050)
+2025-11-21 13:32:12,872 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-21 13:32:12,873 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 13:32:12,873 - template_api_manager - INFO - Fetching template from API: HL0000050 (attempt 1/3)
+2025-11-21 13:32:12,875 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-21 13:32:13,090 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-21 13:32:13,092 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-21 13:32:13,093 - template_api_manager - INFO - Template fetched successfully: HL0000050
+2025-11-21 13:32:13,093 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-21 13:32:13,097 - template_api_manager - DEBUG - Cached template for formId: HL0000050
+2025-11-21 13:32:13,097 - ai_simple_extraction - INFO - 📊 OCR text stats: 4 non-empty lines, 559 characters
+2025-11-21 13:32:13,100 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests/request_20251121_133213_33d64edb.json
+2025-11-21 13:32:13,100 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-21 13:32:13,102 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-21 13:32:23,398 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 1170
+2025-11-21 13:32:23,452 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses/response_20251121_133213_33d64edb.json
+2025-11-21 13:32:23,452 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | คลินิกแพทย์ศิรินนท์  
+[K] receipt_no | 004  
+[K] receipt_date | 5 มค 2565  
+[K] patient_name | ณชมน มเผา  
+[K] hn | -  
+[K] vn | -  
+[K] policyno | -  
+[K] total_amount_in_writing | 150  
+[K] an | -  
+[K] cashier_name | ภยักร  
+[K] visit_date | -  
+[K] patient_signature | -  
+[K] cashier_signature | -  
+[L1] 150 | ค่ายา | 150 | - | 150  
+[L3] 1 ผู้รับเงิน | 1 | 150 | - | 150
+2025-11-21 13:32:23,458 - ai_simple_extraction - INFO - ✅ Parsed 1 billing items + 1 order items = 2 total items
+2025-11-21 13:32:23,458 - ai_simple_extraction - INFO - 📊 Extraction ratio: 50.0% (2/4 lines)
+2025-11-21 13:32:23,458 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 2 total items (50.0%), 13 other fields
+2025-11-21 13:32:23,459 - api_server - INFO - ✅ AI extraction completed: 1 billing items extracted
+2025-11-21 13:32:23,459 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-21 13:32:23,461 - api_server - INFO - ✅ JSON formatting completed
+2025-11-21 13:32:23,463 - api_server - INFO - 📝 API response saved: ./output/api_debug/responses/api_response_extract_text_20251121_133223_ccf45509-6d22-4c0d-ac76-63fc59497d3f.json
+2025-11-21 13:33:03,580 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000050
+2025-11-21 13:33:03,581 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000050
+2025-11-21 13:33:03,582 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 13:33:03,582 - template_api_manager - DEBUG - Cache hit for formId: HL0000050
+2025-11-21 13:33:03,582 - template_api_manager - INFO - Template loaded from cache: HL0000050
+2025-11-21 13:33:03,582 - api_server - INFO - Template loaded: Receipt-Bill (Form ID: HL0000050)
+2025-11-21 13:33:03,582 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-21 13:33:03,583 - template_api_manager - INFO - Getting template for Form ID: HL0000050
+2025-11-21 13:33:03,583 - template_api_manager - DEBUG - Cache hit for formId: HL0000050
+2025-11-21 13:33:03,583 - template_api_manager - INFO - Template loaded from cache: HL0000050
+2025-11-21 13:33:03,583 - ai_simple_extraction - INFO - 📊 OCR text stats: 4 non-empty lines, 559 characters
+2025-11-21 13:33:03,584 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests/request_20251121_133303_2065e783.json
+2025-11-21 13:33:03,584 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-21 13:33:03,586 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-21 13:33:13,315 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 1167
+2025-11-21 13:33:13,357 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses/response_20251121_133303_2065e783.json
+2025-11-21 13:33:13,357 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | คลินิกแพทย์ศิรินนท์  
+[K] receipt_no | 004  
+[K] receipt_date | 5 มค 2565  
+[K] patient_name | ณชมน มเผา  
+[K] hn | -  
+[K] vn | -  
+[K] policyno | -  
+[K] total_amount_in_writing | 150  
+[K] an | -  
+[K] cashier_name | ภยักร  
+[K] visit_date | -  
+[K] patient_signature | -  
+[K] cashier_signature | -  
+[L1] 150 | ค่ายา | 150 | - | 150  
+[L3] 1 ผู้รับเงิน | 1 | 150 | - | 150
+2025-11-21 13:33:13,358 - ai_simple_extraction - INFO - ✅ Parsed 1 billing items + 1 order items = 2 total items
+2025-11-21 13:33:13,358 - ai_simple_extraction - INFO - 📊 Extraction ratio: 50.0% (2/4 lines)
+2025-11-21 13:33:13,358 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 2 total items (50.0%), 13 other fields
+2025-11-21 13:33:13,358 - api_server - INFO - ✅ AI extraction completed: 1 billing items extracted
+2025-11-21 13:33:13,358 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-21 13:33:13,359 - api_server - INFO - ✅ JSON formatting completed
+2025-11-21 13:33:13,359 - api_server - INFO - 📝 API response saved: ./output/api_debug/responses/api_response_extract_text_20251121_133313_6518ef98-efa9-48f7-a7b2-a1d10744f9d9.json
+2025-11-21 13:34:26,243 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000052
+2025-11-21 13:34:26,244 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000052
+2025-11-21 13:34:26,244 - template_api_manager - INFO - Getting template for Form ID: HL0000052
+2025-11-21 13:34:26,244 - template_api_manager - INFO - Fetching template from API: HL0000052 (attempt 1/3)
+2025-11-21 13:34:26,246 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-21 13:34:26,626 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-21 13:34:26,628 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-21 13:34:26,629 - template_api_manager - INFO - Template fetched successfully: HL0000052
+2025-11-21 13:34:26,629 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-21 13:34:26,633 - template_api_manager - DEBUG - Cached template for formId: HL0000052
+2025-11-21 13:34:26,633 - api_server - INFO - Template loaded: Invoice (Form ID: HL0000052)
+2025-11-21 13:34:26,633 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-21 13:34:26,634 - template_api_manager - INFO - Getting template for Form ID: HL0000052
+2025-11-21 13:34:26,634 - template_api_manager - INFO - Fetching template from API: HL0000052 (attempt 1/3)
+2025-11-21 13:34:26,636 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-21 13:34:26,953 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-21 13:34:26,955 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-21 13:34:26,955 - template_api_manager - INFO - Template fetched successfully: HL0000052
+2025-11-21 13:34:26,955 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-21 13:34:26,958 - template_api_manager - DEBUG - Cached template for formId: HL0000052
+2025-11-21 13:34:26,958 - ai_simple_extraction - INFO - 📊 OCR text stats: 4 non-empty lines, 1910 characters
+2025-11-21 13:34:26,960 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests/request_20251121_133426_637a33b4.json
+2025-11-21 13:34:26,961 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-21 13:34:26,963 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-21 13:35:25,420 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 3441
+2025-11-21 13:35:25,424 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses/response_20251121_133426_637a33b4.json
+2025-11-21 13:35:25,424 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | เรงพยาบาสกรุงเทพ  
+[K] hn | 55-22-002296  
+[K] an | 155-24-007324  
+[K] invoice_no | -  
+[K] invoice_date | 20/12/2024  
+[K] company_name | FAY AXA  
+[K] discount | 2,430.38  
+[K] admission_date | 17/12/2024  
+[K] discharge_date | 20/12/2024  
+[K] total_admit_date | 3  
+[K] patient_name | เด็กชายพสธร ปทุมณี  
+[K] age | -  
+[K] doctor_name | -  
+[K] doctor_department | -  
+[K] company_code | FAY AXA  
+[K] service_code | -  
+[K] branch_code | CHIANG RAI  
+[K] ref1 | -  
+[K] ref
+2025-11-21 13:35:25,426 - ai_simple_extraction - INFO - ✅ Parsed 14 billing items + 1 order items = 15 total items
+2025-11-21 13:35:25,426 - ai_simple_extraction - INFO - 📊 Extraction ratio: 375.0% (15/4 lines)
+2025-11-21 13:35:25,427 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 15 total items (375.0%), 25 other fields
+2025-11-21 13:35:25,427 - api_server - INFO - ✅ AI extraction completed: 14 billing items extracted
+2025-11-21 13:35:25,428 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-21 13:35:25,435 - api_server - INFO - ✅ JSON formatting completed
+2025-11-21 13:35:25,439 - api_server - INFO - 📝 API response saved: ./output/api_debug/responses/api_response_extract_text_20251121_133525_7df7f173-5afd-4294-8547-9faa8739f4e9.json
