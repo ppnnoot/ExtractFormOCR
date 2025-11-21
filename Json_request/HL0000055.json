@@ -1,0 +1,189 @@
+{
+  "documents": [
+    {
+      "page": "1",
+      "total_page": "1",
+      "document_code": "HL0000055",
+      "document_info": [
+        {
+          "code": "hospital_name",
+          "page": "1",
+          "type": "string",
+          "value": "โรงพยาบาลรวมแพทย์ฉะเชิงเทรา",
+          "accuracyRate": null
+        },
+        {
+          "code": "provider_address",
+          "page": "1",
+          "type": "string",
+          "value": "88/122-123 หมู่ที่ 13 ถนนฉะเชิงเทรา-พนมสารคาม ตำบลบางตีนเป็ด อำเภอเมืองฉะเชิงเทรา จังหวัดฉะเชิงเทรา 24000",
+          "accuracyRate": null
+        },
+        {
+          "code": "tax_identification_number",
+          "page": "1",
+          "type": "string",
+          "value": "67-04-209",
+          "accuracyRate": null
+        },
+        {
+          "code": "fund_name",
+          "page": "1",
+          "type": "string",
+          "value": "บริษัท กรุงไทย แอกซ่า ประกันชีวิต บมจ.",
+          "accuracyRate": null
+        },
+        {
+          "code": "patient_name",
+          "page": "1",
+          "type": "string",
+          "value": "รวมผู้ป่วย 6 ราย",
+          "accuracyRate": null
+        },
+        {
+          "code": "policy_no",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "vn",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "hn",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "an",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "billing_number",
+          "page": "1",
+          "type": "string",
+          "value": "T00010800",
+          "accuracyRate": null
+        },
+        {
+          "code": "billing_date",
+          "page": "1",
+          "type": "string",
+          "value": "01/05/2024",
+          "accuracyRate": null
+        },
+        {
+          "code": "due_date",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "admission_date",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "discharge_date",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "visit_date",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "total_admitted_date",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "treatment_detail",
+          "page": "1",
+          "type": "string",
+          "value": "1.CI670400301,16/04/2567,HN:630600173,นางสาวพิมพ์ประภา พิมพิสอน,11494.80|2.CI670400302,16/04/2567,HN:670400413,นายบุณยชัย รวยตระกูล,42366.78|3.CI670400402,22/04/2567,HN:670400668,นายธนคล ภัทรหิรัญ,22077.30|4.CI670400417,23/04/2567,HN:670400667,นายธีรพร บำรุงสาลี,31416.98|5.CI670400452,25/04/2567,HN:620100479,นางสาวธนัญชนก ธวัชลักขณากุล,52806.50|6.CI670400467,25/04/2567,HN:660100206,นายรักเกียรติ มานิตย์วงษ์,71064.30",
+          "accuracyRate": null
+        },
+        {
+          "code": "invoice_no",
+          "page": "1",
+          "type": "string",
+          "value": "CI670400301,CI670400302,CI670400402,CI670400417,CI670400452,CI670400467",
+          "accuracyRate": null
+        },
+        {
+          "code": "total_invoice_amount",
+          "page": "1",
+          "type": "decimal",
+          "value": "231226.66",
+          "accuracyRate": null
+        },
+        {
+          "code": "bank",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "account_number",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "billing_name",
+          "page": "1",
+          "type": "string",
+          "value": "คุณเมธาพร โสมประยูร",
+          "accuracyRate": null
+        },
+        {
+          "code": "billing_signature",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "cashier_signature",
+          "page": "1",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "settlement_date_and_time",
+          "page": "1",
+          "type": "string",
+          "value": "13/05/2024",
+          "accuracyRate": null
+        }
+      ],
+      "document_type": "Billing Statement",
+      "need_correction": false
+    }
+  ],
+  "transaction_no": ""
+}

@@ -1,0 +1,155 @@
+{
+  "template_name": "receipt",
+  "template_type": "Receipt",
+  "description": "Template for general receipt extraction",
+  "version": "1.0.0",
+  "extraction_instructions": {
+    "document_type": "Receipt",
+    "fields_to_extract": [
+      {
+        "field_name": "hospital_name",
+        "description": "ชื่อโรงพยาบาล",
+        "type": "string",
+        "required": true,
+        "examples": [
+          "โรงพยาบาลกรุงเทพ",
+          "โรงพยาบาลสมิติเวช"
+        ]
+      },
+      {
+        "field_name": "hn",
+        "description": "หมายเลขผู้ป่วย (HN)",
+        "type": "string",
+        "required": true,
+        "pattern": "\\d{2}-\\d{2}-\\d{6}",
+        "examples": [
+          "04-20-006834",
+          "01-15-123456"
+        ]
+      },
+      {
+        "field_name": "an",
+        "description": "หมายเลขผู้ป่วยใน (AN)",
+        "type": "string",
+        "required": false,
+        "pattern": "\\d{3}-\\d{2}-\\d{6}",
+        "examples": [
+          "104-24-004742",
+          "201-15-123456"
+        ]
+      },
+      {
+        "field_name": "gross_amount",
+        "description": "ยอดรวมทั้งหมด",
+        "type": "decimal",
+        "required": true,
+        "examples": [
+          "445205.00",
+          "32567.00"
+        ]
+      },
+      {
+        "field_name": "number_of_admit",
+        "description": "จำนวนวันนอน",
+        "type": "integer",
+        "required": false,
+        "examples": [
+          "4",
+          "7",
+          "1"
+        ]
+      },
+      {
+        "field_name": "admission_date",
+        "description": "วันที่เข้ารับการรักษา",
+        "type": "date",
+        "required": false,
+        "format": "DD/MM/YYYY",
+        "examples": [
+          "2024-03-07",
+          "2024-03-31"
+        ]
+      },
+      {
+        "field_name": "discharge_date",
+        "description": "วันที่ออกจากโรงพยาบาล",
+        "type": "date",
+        "required": false,
+        "format": "DD/MM/YYYY",
+        "examples": [
+          "2024-03-11",
+          "2024-03-15"
+        ]
+      }
+    ]
+  },
+  "output_structure": {
+    "extraction_type": "Receipt",
+    "confidence": 0,
+    "extracted_data": {
+      "document_code": "CM0000096",
+      "document_type": "Receipt",
+      "need_correction": false,
+      "total_page": "-",
+      "page": "-",
+      "document_info": [
+        {
+          "accuracyRate": "-",
+          "type": "string",
+          "code": "hospital_name",
+          "value": "-",
+          "page": "-"
+        },
+        {
+          "accuracyRate": "-",
+          "type": "string",
+          "code": "hn",
+          "value": "-",
+          "page": "-"
+        },
+        {
+          "accuracyRate": "-",
+          "type": "string",
+          "code": "an",
+          "value": "-",
+          "page": "-"
+        },
+        {
+          "accuracyRate": "-",
+          "type": "decimal",
+          "code": "gross_amount",
+          "value": "-",
+          "page": "-"
+        },
+        {
+          "accuracyRate": "-",
+          "type": "integer",
+          "code": "number_of_admit",
+          "value": "-",
+          "page": "-"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "date",
+          "code": "admission_date",
+          "value": "-",
+          "page": "-"
+        },
+        {
+          "accuracyRate": "-",
+          "type": "date",
+          "code": "discharge_date",
+          "value": "-",
+          "page": "-"
+        }
+      ]
+    },
+    "metadata": {
+      "source_length": "-",
+      "processing_time": "-",
+      "detected_language": "-",
+      "entities_found": []
+    }
+  },
+  "ai_prompt_template": "Extract the following information from the medical receipt text:\n\n1. HOSPITAL_NAME: Name of the hospital\n2. HN: Patient number (format: XX-XX-XXXXXX)\n3. AN: Admission number (format: XXX-XX-XXXXXX) - if available\n4. GROSS_AMOUNT: Total amount as decimal number\n5. NUMBER_OF_ADMIT: Number of admission days - if available\n6. ADMISSION_DATE: Admission date (format: DD/MM/YYYY) - if available\n7. DISCHARGE_DATE: Discharge date (format: DD/MM/YYYY) - if available\n\nReturn the data in this exact format:\nHOSPITAL_NAME: [hospital name]\nHN: [patient number]\nAN: [admission number or null]\nGROSS_AMOUNT: [total amount as number]\nNUMBER_OF_ADMIT: [days or null]\nADMISSION_DATE: [date or null]\nDISCHARGE_DATE: [date or null]"
+}

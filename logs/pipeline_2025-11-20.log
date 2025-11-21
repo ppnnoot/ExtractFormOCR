@@ -1,0 +1,1435 @@
+2025-11-20 11:14:47,806 - __main__ - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-20 11:14:47,806 - __main__ - INFO - 📁 Log directory: ./logs
+2025-11-20 11:14:47,806 - __main__ - INFO - 📅 Max retention: 30 days
+2025-11-20 11:14:47,826 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-20 11:14:47,885 - api_server - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-20 11:14:47,886 - api_server - INFO - 📁 Log directory: ./logs
+2025-11-20 11:14:47,886 - api_server - INFO - 📅 Max retention: 30 days
+2025-11-20 11:14:47,897 - api_server - INFO - Initializing components in lifespan...
+2025-11-20 11:14:47,898 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 11:14:47,899 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 11:14:47,899 - api_server - INFO - Two-Step AI Pipeline initialized successfully
+2025-11-20 11:14:47,899 - multi_ocr_adapter - INFO - Initialized OCR engines: ['oneocr']
+2025-11-20 11:14:47,900 - api_server - INFO - Multi-OCR Manager initialized: ['oneocr']
+2025-11-20 11:14:47,900 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 11:14:47,900 - document_classifier - INFO - Loading document types from Template API...
+2025-11-20 11:14:47,900 - template_api_manager - INFO - Fetching all templates from API
+2025-11-20 11:14:47,902 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 11:14:48,123 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 11:14:48,125 - template_api_manager - DEBUG - Parsed template: HL0000055 - Statement from Hospital
+2025-11-20 11:14:48,126 - template_api_manager - DEBUG - Parsed template: HL0000043 - Other medical document
+2025-11-20 11:14:48,126 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 11:14:48,126 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-20 11:14:48,127 - template_api_manager - DEBUG - Parsed template: HL0000051 - E-Receipt
+2025-11-20 11:14:48,127 - template_api_manager - DEBUG - Parsed template: HL0000054 - Estimate Medical Expense report, GOP, guarantee email
+2025-11-20 11:14:48,128 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-20 11:14:48,128 - template_api_manager - INFO - Fetched 7 templates from API
+2025-11-20 11:14:48,129 - document_classifier - INFO - Loaded 7 document types from API: ['B07_STATEMENT', 'HL0000043_UNKNOWN', 'B05_HOSPITAL_DETAIL', 'B01_RECEIPT', 'HL0000051_UNKNOWN', 'B06_ESTIMATE_GOP', 'B04_INVOICE']
+2025-11-20 11:14:48,129 - api_server - INFO - Document Classifier initialized successfully
+2025-11-20 11:14:48,129 - api_server - INFO - Authentication Manager initialized successfully
+2025-11-20 11:14:48,130 - security_module - INFO - SECURITY: SYSTEM_STARTUP - {'timestamp': '2025-11-20T11:14:48.130137'}
+2025-11-20 11:26:12,620 - template_api_manager - INFO - Fetching all templates from API
+2025-11-20 11:26:12,623 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 11:26:12,814 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 11:26:12,817 - template_api_manager - DEBUG - Parsed template: HL0000055 - Statement from Hospital
+2025-11-20 11:26:12,817 - template_api_manager - DEBUG - Parsed template: HL0000043 - Other medical document
+2025-11-20 11:26:12,818 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 11:26:12,818 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-20 11:26:12,819 - template_api_manager - DEBUG - Parsed template: HL0000051 - E-Receipt
+2025-11-20 11:26:12,820 - template_api_manager - DEBUG - Parsed template: HL0000054 - Estimate Medical Expense report, GOP, guarantee email
+2025-11-20 11:26:12,821 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-20 11:26:12,821 - template_api_manager - INFO - Fetched 7 templates from API
+2025-11-20 11:28:37,710 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000052
+2025-11-20 11:28:37,727 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000052
+2025-11-20 11:28:37,727 - template_api_manager - INFO - Getting template for Form ID: HL0000052
+2025-11-20 11:28:37,728 - template_api_manager - INFO - Fetching template from API: HL0000052 (attempt 1/3)
+2025-11-20 11:28:37,730 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 11:28:37,865 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 11:28:37,869 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-20 11:28:37,869 - template_api_manager - INFO - Template fetched successfully: HL0000052
+2025-11-20 11:28:37,870 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-20 11:28:37,871 - template_api_manager - DEBUG - Cached template for formId: HL0000052
+2025-11-20 11:28:37,872 - api_server - INFO - Template loaded: Invoice (Form ID: HL0000052)
+2025-11-20 11:28:37,872 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-20 11:28:37,873 - template_api_manager - INFO - Getting template for Form ID: HL0000052
+2025-11-20 11:28:37,874 - template_api_manager - INFO - Fetching template from API: HL0000052 (attempt 1/3)
+2025-11-20 11:28:37,876 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 11:28:37,993 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 11:28:37,995 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-20 11:28:37,995 - template_api_manager - INFO - Template fetched successfully: HL0000052
+2025-11-20 11:28:37,996 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-20 11:28:37,997 - template_api_manager - DEBUG - Cached template for formId: HL0000052
+2025-11-20 11:28:38,001 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests\request_20251120_112837_ca4048a3.json
+2025-11-20 11:28:38,001 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-20 11:28:38,003 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-20 11:29:42,910 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 3663
+2025-11-20 11:29:42,919 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses\response_20251120_112837_ca4048a3.json
+2025-11-20 11:29:42,920 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | เรงพยาบาสกรุงเทพ  
+[K] hn | 55-22-002296  
+[K] an | 155-24-007324  
+[K] invoice_no | -  
+[K] invoice_date | 20/12/2024  
+[K] company_name | FAY AXA  
+[K] discount | 2,430.38  
+[K] admission_date | 17/12/2024  
+[K] discharge_date | 20/12/2024  
+[K] total_admit_date | 3  
+[K] patient_name | เด็กชายพสธร ปทุมณี  
+[K] age | -  
+[K] doctor_name | -  
+[K] doctor_department | -  
+[K] company_code | -  
+[K] service_code | -  
+[K] branch_code | -  
+[K] ref1 | -  
+[K] ref2 | -  
+[K] vn_
+2025-11-20 11:29:42,971 - ai_simple_extraction - INFO - ✅ Parsed 9 billing items
+2025-11-20 11:29:42,971 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 9 billing items, 26 other fields
+2025-11-20 11:29:42,972 - api_server - INFO - ✅ AI extraction completed: 9 billing items extracted
+2025-11-20 11:29:42,972 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-20 11:29:42,973 - ai_simple_extraction - INFO - Using document_code from template API: HL0000052
+2025-11-20 11:29:42,973 - ai_simple_extraction - INFO - Using document_type from template API: Invoice
+2025-11-20 11:29:42,973 - ai_simple_extraction - INFO - Using template_structure parsed from API
+2025-11-20 11:29:42,974 - ai_simple_extraction - INFO - 📋 Template structure loaded: {
+  "documents": [
+    {
+      "page": "",
+      "total_page": "",
+      "document_code": "HL0000052",
+      "document_info": [
+        {
+          "code": "hospital_name",
+          "page": null,
+          "type": "string",
+          "value": null,
+          "accuracyRate": null
+        },
+        {
+          "code": "hn",
+          "page": null,
+          "type": "string",
+          "value": null,
+          "accuracyRate": null
+        },
+        {
+          "code": "an",
+          "page": nul...
+2025-11-20 11:29:42,975 - ai_simple_extraction - INFO - 📋 Template has 26 document_info fields
+2025-11-20 11:29:42,975 - ai_simple_extraction - INFO - 📋 Billing items template structure: 1 template items
+2025-11-20 11:29:42,976 - ai_simple_extraction - INFO - 📋 First billing item template: {
+  "code": "billing_item",
+  "page": "",
+  "type": "array",
+  "value": [
+    {
+      "code": "billing_code",
+      "page": "",
+      "type": "string",
+      "value": "",
+      "accuracyRate": null
+    },
+    {
+      "code": "billing_desc",
+      "page": "",
+      "type": "string",
+      "value": ""...
+2025-11-20 11:29:43,010 - ai_simple_extraction - INFO - Building billing items: extracted_count=9, template_count=1
+2025-11-20 11:29:43,011 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1
+2025-11-20 11:29:43,011 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าน้ำเกลือ
+2025-11-20 11:29:43,012 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,012 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2,134.00
+2025-11-20 11:29:43,013 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 213.40
+2025-11-20 11:29:43,013 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,920.60
+2025-11-20 11:29:43,013 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(1)
+2025-11-20 11:29:43,014 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-20 11:29:43,014 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,014 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 8,016.80
+2025-11-20 11:29:43,014 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 801.68
+2025-11-20 11:29:43,015 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 7,215.12
+2025-11-20 11:29:43,015 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยา
+2025-11-20 11:29:43,015 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:29:43,015 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 8,016.80
+2025-11-20 11:29:43,016 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 801.68
+2025-11-20 11:29:43,016 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 7,215.12
+2025-11-20 11:29:43,016 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(1)
+2025-11-20 11:29:43,017 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายา
+2025-11-20 11:29:43,017 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,017 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 8,016.80
+2025-11-20 11:29:43,017 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 801.68
+2025-11-20 11:29:43,018 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 7,215.12
+2025-11-20 11:29:43,018 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยา
+2025-11-20 11:29:43,018 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:29:43,019 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 8,016.80
+2025-11-20 11:29:43,019 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 801.68
+2025-11-20 11:29:43,019 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 7,215.12
+2025-11-20 11:29:43,020 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(2)
+2025-11-20 11:29:43,020 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่ายาผู้ป่วยในกลับบ้าน
+2025-11-20 11:29:43,021 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,021 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 767.00
+2025-11-20 11:29:43,021 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 76.70
+2025-11-20 11:29:43,021 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 690.30
+2025-11-20 11:29:43,022 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(1)
+2025-11-20 11:29:43,022 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าออกซิเจน
+2025-11-20 11:29:43,022 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,023 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1,200.00
+2025-11-20 11:29:43,023 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 120.00
+2025-11-20 11:29:43,023 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,080.00
+2025-11-20 11:29:43,024 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2
+2025-11-20 11:29:43,024 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาเวชภัณฑ์
+2025-11-20 11:29:43,024 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,024 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1,692.00
+2025-11-20 11:29:43,025 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 169.20
+2025-11-20 11:29:43,025 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,522.80
+2025-11-20 11:29:43,026 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2(1)
+2025-11-20 11:29:43,026 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: เวชภัณฑ์
+2025-11-20 11:29:43,026 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,027 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1,692.00
+2025-11-20 11:29:43,027 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 169.20
+2025-11-20 11:29:43,028 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,522.80
+2025-11-20 11:29:43,029 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2(1)
+2025-11-20 11:29:43,029 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: เวชภัณฑ์
+2025-11-20 11:29:43,029 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,029 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1,692.00
+2025-11-20 11:29:43,030 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 169.20
+2025-11-20 11:29:43,030 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,522.80
+2025-11-20 11:29:43,030 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 11:29:43,030 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาตรวจวินิจฉัยทางเทคนิคการแพทย์และพยาธิวิทยา
+2025-11-20 11:29:43,031 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,031 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2,994.00
+2025-11-20 11:29:43,032 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 299.40
+2025-11-20 11:29:43,032 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2,694.60
+2025-11-20 11:29:43,032 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 11:29:43,032 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าตรวจวินิจฉัยทางเทคนิคการแพทย์
+2025-11-20 11:29:43,033 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,033 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2,994.00
+2025-11-20 11:29:43,034 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 299.40
+2025-11-20 11:29:43,034 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2,694.60
+2025-11-20 11:29:43,034 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 11:29:43,035 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าตรวจวินิจฉัยทางเทคนิคการแพทย์
+2025-11-20 11:29:43,035 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,035 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2,994.00
+2025-11-20 11:29:43,036 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 299.40
+2025-11-20 11:29:43,037 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2,694.60
+2025-11-20 11:29:43,037 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.12
+2025-11-20 11:29:43,038 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาบริการพยาบาลของผู้ประกอบวิชาชีพการพยาบาลหรือการผดุงครรภ์
+2025-11-20 11:29:43,038 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,038 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3,000.00
+2025-11-20 11:29:43,038 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:29:43,038 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 3,000.00
+2025-11-20 11:29:43,039 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.12
+2025-11-20 11:29:43,039 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าบริการการพยาบาลของผู้ประกอบวิชาชีพการพยาบาลและการผดุงครรภ์ (A1000X3)
+2025-11-20 11:29:43,039 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,040 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3,000.00
+2025-11-20 11:29:43,040 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:29:43,040 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 3,000.00
+2025-11-20 11:29:43,041 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.12
+2025-11-20 11:29:43,041 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าบริการการพยาบาลของผู้ประกอบวิชาชีพการพยาบาลและการผดุงครรภ์ (A1000X3)
+2025-11-20 11:29:43,041 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,042 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3,000.00
+2025-11-20 11:29:43,042 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:29:43,042 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 3,000.00
+2025-11-20 11:29:43,043 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.14
+2025-11-20 11:29:43,043 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาบริการเหมาจายค่ารักษาพยาบาล
+2025-11-20 11:29:43,043 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,044 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2,700.00
+2025-11-20 11:29:43,044 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 270.00
+2025-11-20 11:29:43,044 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2,430.00
+2025-11-20 11:29:43,044 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.14(2)
+2025-11-20 11:29:43,045 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าบริการทางการแพทย์อื่น ๆ (@900x3)
+2025-11-20 11:29:43,045 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,045 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2,700.00
+2025-11-20 11:29:43,045 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 270.00
+2025-11-20 11:29:43,045 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2,430.00
+2025-11-20 11:29:43,046 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.14(2)
+2025-11-20 11:29:43,046 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าบริการทางการแพทย์อื่น ๆ (@900x3)
+2025-11-20 11:29:43,047 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,047 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2,700.00
+2025-11-20 11:29:43,047 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 270.00
+2025-11-20 11:29:43,047 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2,430.00
+2025-11-20 11:29:43,048 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.2.1
+2025-11-20 11:29:43,048 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าห้องหรือค่าเตียงผู้ป่วยใน ประเภทต่าง ๆ
+2025-11-20 11:29:43,049 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,049 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 4,800.00
+2025-11-20 11:29:43,049 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 480.00
+2025-11-20 11:29:43,050 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 4,320.00
+2025-11-20 11:29:43,050 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าหอง ค่าเตียงและอุปกรณ์มาตรฐานประจำห้องผู้ป่วยในประเภทต่างๆ (A1600x3)
+2025-11-20 11:29:43,050 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,051 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 4,800.00
+2025-11-20 11:29:43,052 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 480.00
+2025-11-20 11:29:43,052 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 4,320.00
+2025-11-20 11:29:43,053 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าหอง ค่าเตียงและอุปกรณ์มาตรฐานประจำห้องผู้ป่วยในประเภทต่างๆ (A1600x3)
+2025-11-20 11:29:43,054 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,054 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 4,800.00
+2025-11-20 11:29:43,054 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 480.00
+2025-11-20 11:29:43,055 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 4,320.00
+2025-11-20 11:29:43,055 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ค่าอาหารผู้ป่วย
+2025-11-20 11:29:43,055 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:29:43,056 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1,440.00
+2025-11-20 11:29:43,056 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:29:43,056 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,440.00
+2025-11-20 11:29:43,056 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 2.3.1
+2025-11-20 11:29:43,057 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: อาหารผู้ป่วยในปกติ
+2025-11-20 11:29:43,057 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,057 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1,440.00
+2025-11-20 11:29:43,058 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:29:43,058 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,440.00
+2025-11-20 11:29:43,058 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 2.3.1
+2025-11-20 11:29:43,059 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: อาหารผู้ป่วยในปกติ
+2025-11-20 11:29:43,059 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:29:43,059 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1,440.00
+2025-11-20 11:29:43,060 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:29:43,060 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1,440.00
+2025-11-20 11:29:43,060 - ai_simple_extraction - INFO - ✅ Built 9 hierarchical billing items from template
+2025-11-20 11:29:43,062 - api_server - INFO - ✅ JSON formatting completed
+2025-11-20 11:29:43,071 - api_server - INFO - 📝 API response saved: ./output\api_debug\responses\api_response_extract_text_20251120_112943_8569fb39-7855-4dca-9ca8-c06dd35f8b9c.json
+2025-11-20 11:37:07,701 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000053
+2025-11-20 11:37:07,706 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000053
+2025-11-20 11:37:07,707 - template_api_manager - INFO - Getting template for Form ID: HL0000053
+2025-11-20 11:37:07,707 - template_api_manager - INFO - Fetching template from API: HL0000053 (attempt 1/3)
+2025-11-20 11:37:07,708 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 11:37:07,851 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 11:37:07,853 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 11:37:07,854 - template_api_manager - INFO - Template fetched successfully: HL0000053
+2025-11-20 11:37:07,854 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-20 11:37:07,855 - template_api_manager - DEBUG - Cached template for formId: HL0000053
+2025-11-20 11:37:07,856 - api_server - INFO - Template loaded: Detail of invoice (Form ID: HL0000053)
+2025-11-20 11:37:07,856 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-20 11:37:07,857 - template_api_manager - INFO - Getting template for Form ID: HL0000053
+2025-11-20 11:37:07,857 - template_api_manager - INFO - Fetching template from API: HL0000053 (attempt 1/3)
+2025-11-20 11:37:07,859 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 11:37:07,952 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 11:37:07,954 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 11:37:07,955 - template_api_manager - INFO - Template fetched successfully: HL0000053
+2025-11-20 11:37:07,955 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-20 11:37:07,956 - template_api_manager - DEBUG - Cached template for formId: HL0000053
+2025-11-20 11:37:07,960 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests\request_20251120_113707_42f7f6f1.json
+2025-11-20 11:37:07,961 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-20 11:37:07,962 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-20 11:38:50,418 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 4342
+2025-11-20 11:38:50,423 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses\response_20251120_113707_42f7f6f1.json
+2025-11-20 11:38:50,424 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | โรงพยาบาลกรุงเทพ  
+[K] hn | 04-04-021008  
+[K] an | 104-21-010742  
+[K] admission_date | 23/08/2021  
+[K] patient_name | นาย วรากร ผอบแก้ว  
+[K] vn_en | 104-21-010742  
+[K] amount_total | 15964.00  
+[K] discount_total | 1835.40  
+[K] net_amount_total | 14128.60  
+
+[L1] 1.1.1 | คายาและสารอาหารทางเสนเลือด | 2146.00 | 214.60 | 1931.40  
+[L2] 1.1.1(18) | คานำเกลือ | 2146.00 | 214.60 | 1931.40  
+[L3] D-5-S/2 (no set) SOFT BAGS (1000 mL) | 2 Bag | 1410.00 | 141.00 | 1269.00  
+[L3] 
+2025-11-20 11:38:50,426 - ai_simple_extraction - INFO - ✅ Parsed 5 billing items
+2025-11-20 11:38:50,427 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 5 billing items, 10 other fields
+2025-11-20 11:38:50,428 - api_server - INFO - ✅ AI extraction completed: 5 billing items extracted
+2025-11-20 11:38:50,428 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-20 11:38:50,429 - ai_simple_extraction - INFO - Using document_code from template API: HL0000053
+2025-11-20 11:38:50,429 - ai_simple_extraction - INFO - Using document_type from template API: Detail of invoice
+2025-11-20 11:38:50,430 - ai_simple_extraction - INFO - Using template_structure parsed from API
+2025-11-20 11:38:50,432 - ai_simple_extraction - INFO - 📋 Template structure loaded: {
+  "documents": [
+    {
+      "page": "",
+      "total_page": "",
+      "document_code": "HL0000053",
+      "document_info": [
+        {
+          "code": "hospital_name",
+          "page": "",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "hn",
+          "page": "",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "an",
+          "page": "",
+       ...
+2025-11-20 11:38:50,433 - ai_simple_extraction - INFO - 📋 Template has 10 document_info fields
+2025-11-20 11:38:50,434 - ai_simple_extraction - INFO - 📋 Billing items template structure: 1 template items
+2025-11-20 11:38:50,434 - ai_simple_extraction - INFO - 📋 First billing item template: {
+  "code": "billing_item",
+  "page": "",
+  "type": "array",
+  "value": [
+    {
+      "code": "billing_code",
+      "page": "",
+      "type": "string",
+      "value": "",
+      "accuracyRate": null
+    },
+    {
+      "code": "billing_desc",
+      "page": "",
+      "type": "string",
+      "value": ""...
+2025-11-20 11:38:50,435 - ai_simple_extraction - INFO - Building billing items: extracted_count=5, template_count=1
+2025-11-20 11:38:50,436 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1
+2025-11-20 11:38:50,437 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายาและสารอาหารทางเสนเลือด
+2025-11-20 11:38:50,437 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:38:50,438 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2146.00
+2025-11-20 11:38:50,439 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 214.60
+2025-11-20 11:38:50,439 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1931.40
+2025-11-20 11:38:50,440 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(18)
+2025-11-20 11:38:50,441 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คานำเกลือ
+2025-11-20 11:38:50,442 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,443 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2146.00
+2025-11-20 11:38:50,443 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 214.60
+2025-11-20 11:38:50,444 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1931.40
+2025-11-20 11:38:50,444 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: D-5-S/2 (no set) SOFT BAGS (1000 mL)
+2025-11-20 11:38:50,445 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,446 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1410.00
+2025-11-20 11:38:50,446 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 141.00
+2025-11-20 11:38:50,447 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1269.00
+2025-11-20 11:38:50,447 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H.S.S (100 ml) Injection
+2025-11-20 11:38:50,448 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,449 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 736.00
+2025-11-20 11:38:50,449 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 73.60
+2025-11-20 11:38:50,450 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 662.40
+2025-11-20 11:38:50,451 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(18)
+2025-11-20 11:38:50,453 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คานำเกลือ
+2025-11-20 11:38:50,454 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,454 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2146.00
+2025-11-20 11:38:50,454 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 214.60
+2025-11-20 11:38:50,454 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1931.40
+2025-11-20 11:38:50,455 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: D-5-S/2 (no set) SOFT BAGS (1000 mL)
+2025-11-20 11:38:50,455 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,455 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1410.00
+2025-11-20 11:38:50,456 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 141.00
+2025-11-20 11:38:50,456 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1269.00
+2025-11-20 11:38:50,457 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H.S.S (100 ml) Injection
+2025-11-20 11:38:50,457 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,457 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 736.00
+2025-11-20 11:38:50,458 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 73.60
+2025-11-20 11:38:50,458 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 662.40
+2025-11-20 11:38:50,459 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1
+2025-11-20 11:38:50,460 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายา
+2025-11-20 11:38:50,460 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:38:50,460 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 6716.00
+2025-11-20 11:38:50,461 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 671.60
+2025-11-20 11:38:50,461 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 6044.40
+2025-11-20 11:38:50,461 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-20 11:38:50,462 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายา
+2025-11-20 11:38:50,462 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,463 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 11:38:50,463 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,463 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 11:38:50,463 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 11:38:50,464 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,464 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 11:38:50,464 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 8.40
+2025-11-20 11:38:50,464 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 75.60
+2025-11-20 11:38:50,465 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 11:38:50,465 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,465 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 100.00
+2025-11-20 11:38:50,466 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 10.00
+2025-11-20 11:38:50,466 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 90.00
+2025-11-20 11:38:50,467 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 11:38:50,467 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,467 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 185.00
+2025-11-20 11:38:50,467 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 18.50
+2025-11-20 11:38:50,468 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 166.50
+2025-11-20 11:38:50,468 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 11:38:50,468 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,468 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 212.00
+2025-11-20 11:38:50,468 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.20
+2025-11-20 11:38:50,469 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 190.80
+2025-11-20 11:38:50,469 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Hidrasec (100 mg) Cap - เม็ด
+2025-11-20 11:38:50,469 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,470 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 352.00
+2025-11-20 11:38:50,470 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 35.20
+2025-11-20 11:38:50,470 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 316.80
+2025-11-20 11:38:50,470 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H ybutyl inj. - Buscopan ฉีด
+2025-11-20 11:38:50,471 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,471 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 857.00
+2025-11-20 11:38:50,471 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 85.70
+2025-11-20 11:38:50,472 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 771.30
+2025-11-20 11:38:50,472 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: KetoLAC Inj (30 mg)
+2025-11-20 11:38:50,472 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,473 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 788.00
+2025-11-20 11:38:50,473 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 78.80
+2025-11-20 11:38:50,474 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 709.20
+2025-11-20 11:38:50,475 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Meicelin Injection (1 gm)
+2025-11-20 11:38:50,475 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,476 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 4120.00
+2025-11-20 11:38:50,476 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 412.00
+2025-11-20 11:38:50,478 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 3708.00
+2025-11-20 11:38:50,478 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ropermide Cap (2mg)- Imodium -
+2025-11-20 11:38:50,479 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,479 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 18.00
+2025-11-20 11:38:50,479 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 1.80
+2025-11-20 11:38:50,479 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 16.20
+2025-11-20 11:38:50,480 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-20 11:38:50,480 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายา
+2025-11-20 11:38:50,480 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,481 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 11:38:50,481 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,481 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 11:38:50,482 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 11:38:50,482 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,482 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 11:38:50,482 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 8.40
+2025-11-20 11:38:50,483 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 75.60
+2025-11-20 11:38:50,483 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 11:38:50,483 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,483 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 100.00
+2025-11-20 11:38:50,484 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 10.00
+2025-11-20 11:38:50,484 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 90.00
+2025-11-20 11:38:50,484 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 11:38:50,484 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,485 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 185.00
+2025-11-20 11:38:50,485 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 18.50
+2025-11-20 11:38:50,485 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 166.50
+2025-11-20 11:38:50,486 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 11:38:50,486 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,487 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 212.00
+2025-11-20 11:38:50,487 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.20
+2025-11-20 11:38:50,487 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 190.80
+2025-11-20 11:38:50,488 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Hidrasec (100 mg) Cap - เม็ด
+2025-11-20 11:38:50,488 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,488 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 352.00
+2025-11-20 11:38:50,488 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 35.20
+2025-11-20 11:38:50,489 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 316.80
+2025-11-20 11:38:50,489 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H ybutyl inj. - Buscopan ฉีด
+2025-11-20 11:38:50,489 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,490 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 857.00
+2025-11-20 11:38:50,490 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 85.70
+2025-11-20 11:38:50,490 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 771.30
+2025-11-20 11:38:50,491 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: KetoLAC Inj (30 mg)
+2025-11-20 11:38:50,491 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,492 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 788.00
+2025-11-20 11:38:50,492 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 78.80
+2025-11-20 11:38:50,492 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 709.20
+2025-11-20 11:38:50,493 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Meicelin Injection (1 gm)
+2025-11-20 11:38:50,493 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,493 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 4120.00
+2025-11-20 11:38:50,494 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 412.00
+2025-11-20 11:38:50,494 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 3708.00
+2025-11-20 11:38:50,495 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ropermide Cap (2mg)- Imodium -
+2025-11-20 11:38:50,495 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,495 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 18.00
+2025-11-20 11:38:50,496 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 1.80
+2025-11-20 11:38:50,496 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 16.20
+2025-11-20 11:38:50,496 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(2)
+2025-11-20 11:38:50,497 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยากลับบาน (Home Medication)
+2025-11-20 11:38:50,497 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:38:50,497 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 849.00
+2025-11-20 11:38:50,498 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 84.90
+2025-11-20 11:38:50,498 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 764.10
+2025-11-20 11:38:50,498 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(2)1
+2025-11-20 11:38:50,499 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยากลับบาน (Home Medication)
+2025-11-20 11:38:50,499 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,499 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 11:38:50,499 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,500 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 11:38:50,500 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 11:38:50,500 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,500 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 50.00
+2025-11-20 11:38:50,501 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 5.00
+2025-11-20 11:38:50,501 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 45.00
+2025-11-20 11:38:50,501 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 11:38:50,501 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,501 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 48.00
+2025-11-20 11:38:50,502 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.80
+2025-11-20 11:38:50,502 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 43.20
+2025-11-20 11:38:50,502 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ciprobay Tab * * 500 mg * * -O-
+2025-11-20 11:38:50,503 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,503 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 464.00
+2025-11-20 11:38:50,503 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 46.40
+2025-11-20 11:38:50,504 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 417.60
+2025-11-20 11:38:50,504 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 11:38:50,504 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,505 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 95.00
+2025-11-20 11:38:50,505 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 9.50
+2025-11-20 11:38:50,505 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 85.50
+2025-11-20 11:38:50,506 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 11:38:50,506 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,506 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 152.00
+2025-11-20 11:38:50,507 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 15.20
+2025-11-20 11:38:50,507 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 136.80
+2025-11-20 11:38:50,507 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PARAMED * * 500 mg * * Tablet -- เม็ด --
+2025-11-20 11:38:50,508 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,508 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 40.00
+2025-11-20 11:38:50,508 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.00
+2025-11-20 11:38:50,508 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 36.00
+2025-11-20 11:38:50,509 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(2)1
+2025-11-20 11:38:50,509 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยากลับบาน (Home Medication)
+2025-11-20 11:38:50,509 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,509 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 11:38:50,510 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,510 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 11:38:50,511 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 11:38:50,511 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,511 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 50.00
+2025-11-20 11:38:50,512 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 5.00
+2025-11-20 11:38:50,512 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 45.00
+2025-11-20 11:38:50,512 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 11:38:50,513 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,513 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 48.00
+2025-11-20 11:38:50,513 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.80
+2025-11-20 11:38:50,514 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 43.20
+2025-11-20 11:38:50,514 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ciprobay Tab * * 500 mg * * -O-
+2025-11-20 11:38:50,514 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,515 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 464.00
+2025-11-20 11:38:50,515 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 46.40
+2025-11-20 11:38:50,515 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 417.60
+2025-11-20 11:38:50,516 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 11:38:50,516 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,516 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 95.00
+2025-11-20 11:38:50,517 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 9.50
+2025-11-20 11:38:50,517 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 85.50
+2025-11-20 11:38:50,518 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 11:38:50,518 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,518 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 152.00
+2025-11-20 11:38:50,519 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 15.20
+2025-11-20 11:38:50,519 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 136.80
+2025-11-20 11:38:50,519 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PARAMED * * 500 mg * * Tablet -- เม็ด --
+2025-11-20 11:38:50,520 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,520 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 40.00
+2025-11-20 11:38:50,520 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.00
+2025-11-20 11:38:50,520 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 36.00
+2025-11-20 11:38:50,521 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2
+2025-11-20 11:38:50,521 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาเวชภัณฑ์
+2025-11-20 11:38:50,521 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:38:50,522 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1906.00
+2025-11-20 11:38:50,522 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,522 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1906.00
+2025-11-20 11:38:50,522 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2(1)
+2025-11-20 11:38:50,523 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: เวชภัณฑ์ 1 วัสดุสิ้นเปลืองทางการแพทย์
+2025-11-20 11:38:50,523 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,523 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1906.00
+2025-11-20 11:38:50,524 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,524 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1906.00
+2025-11-20 11:38:50,524 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Cotton Sterile 0.35 Gm (3 Pcs/)
+2025-11-20 11:38:50,525 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,525 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 6.00
+2025-11-20 11:38:50,525 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,525 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 6.00
+2025-11-20 11:38:50,526 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Curos Stopper Cap (CSAI-270)
+2025-11-20 11:38:50,526 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,526 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 11:38:50,526 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,527 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 11:38:50,528 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Extention Set With T
+2025-11-20 11:38:50,528 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,528 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 242.00
+2025-11-20 11:38:50,529 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,529 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 242.00
+2025-11-20 11:38:50,530 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: I.V. Catheter (Jelco) #24 (1X50)
+2025-11-20 11:38:50,530 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,531 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 274.00
+2025-11-20 11:38:50,531 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,531 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 274.00
+2025-11-20 11:38:50,532 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: IV SET AV (TYPE-500)
+2025-11-20 11:38:50,533 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,533 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 222.00
+2025-11-20 11:38:50,534 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,534 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 222.00
+2025-11-20 11:38:50,534 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Iv Set Model Infusomat Space Line With Injection Port
+2025-11-20 11:38:50,535 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,535 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 429.00
+2025-11-20 11:38:50,536 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,536 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 429.00
+2025-11-20 11:38:50,537 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PIV KIT With Tegaderm (setผู้ ใหญ่ )
+2025-11-20 11:38:50,537 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,537 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 153.00
+2025-11-20 11:38:50,538 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,538 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 153.00
+2025-11-20 11:38:50,539 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Syringr 10 MI (Disp.)
+2025-11-20 11:38:50,539 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,539 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 168.00
+2025-11-20 11:38:50,540 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,540 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 168.00
+2025-11-20 11:38:50,541 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Thermometer Probe Cover Sheath (Digital)
+2025-11-20 11:38:50,541 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,541 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 11:38:50,542 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,542 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 34.00
+2025-11-20 11:38:50,543 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Three Ways W/O Lock
+2025-11-20 11:38:50,543 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,544 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 250.00
+2025-11-20 11:38:50,545 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,545 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 250.00
+2025-11-20 11:38:50,545 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: 1 Waterproof Bandage
+2025-11-20 11:38:50,546 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,546 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 11:38:50,546 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,547 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 11:38:50,548 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2(1)
+2025-11-20 11:38:50,548 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: เวชภัณฑ์ 1 วัสดุสิ้นเปลืองทางการแพทย์
+2025-11-20 11:38:50,548 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,549 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1906.00
+2025-11-20 11:38:50,549 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,549 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1906.00
+2025-11-20 11:38:50,549 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Cotton Sterile 0.35 Gm (3 Pcs/)
+2025-11-20 11:38:50,550 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,550 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 6.00
+2025-11-20 11:38:50,550 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,551 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 6.00
+2025-11-20 11:38:50,551 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Curos Stopper Cap (CSAI-270)
+2025-11-20 11:38:50,552 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,552 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 11:38:50,553 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,553 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 11:38:50,554 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Extention Set With T
+2025-11-20 11:38:50,554 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,555 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 242.00
+2025-11-20 11:38:50,555 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,556 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 242.00
+2025-11-20 11:38:50,556 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: I.V. Catheter (Jelco) #24 (1X50)
+2025-11-20 11:38:50,556 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,557 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 274.00
+2025-11-20 11:38:50,557 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,557 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 274.00
+2025-11-20 11:38:50,558 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: IV SET AV (TYPE-500)
+2025-11-20 11:38:50,558 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,558 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 222.00
+2025-11-20 11:38:50,558 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,559 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 222.00
+2025-11-20 11:38:50,560 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Iv Set Model Infusomat Space Line With Injection Port
+2025-11-20 11:38:50,561 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,561 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 429.00
+2025-11-20 11:38:50,561 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,562 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 429.00
+2025-11-20 11:38:50,562 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PIV KIT With Tegaderm (setผู้ ใหญ่ )
+2025-11-20 11:38:50,563 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,563 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 153.00
+2025-11-20 11:38:50,564 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,564 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 153.00
+2025-11-20 11:38:50,565 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Syringr 10 MI (Disp.)
+2025-11-20 11:38:50,566 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,566 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 168.00
+2025-11-20 11:38:50,567 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,567 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 168.00
+2025-11-20 11:38:50,568 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Thermometer Probe Cover Sheath (Digital)
+2025-11-20 11:38:50,569 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,569 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 11:38:50,570 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,570 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 34.00
+2025-11-20 11:38:50,571 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Three Ways W/O Lock
+2025-11-20 11:38:50,572 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,572 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 250.00
+2025-11-20 11:38:50,573 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,573 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 250.00
+2025-11-20 11:38:50,575 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: 1 Waterproof Bandage
+2025-11-20 11:38:50,575 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,575 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 11:38:50,576 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 11:38:50,576 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 11:38:50,577 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 11:38:50,578 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาตรวจวินิจฉัยทางเทคนิคการแพทย์และพยาธิวิทยา
+2025-11-20 11:38:50,578 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 11:38:50,579 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3100.00
+2025-11-20 11:38:50,579 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 310.00
+2025-11-20 11:38:50,580 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2790.00
+2025-11-20 11:38:50,580 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 11:38:50,581 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาตรวจวินิจฉัยทางเทคนิคการแพทย์
+2025-11-20 11:38:50,581 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,582 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3100.00
+2025-11-20 11:38:50,582 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 310.00
+2025-11-20 11:38:50,583 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2790.00
+2025-11-20 11:38:50,583 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ALT (Alanine Transaminase)(SGPT)
+2025-11-20 11:38:50,583 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,584 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,584 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,585 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,586 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Complete Blood Count.
+2025-11-20 11:38:50,586 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,587 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,587 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,587 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,588 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Glucose (Random)
+2025-11-20 11:38:50,589 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,589 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 210.00
+2025-11-20 11:38:50,590 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.00
+2025-11-20 11:38:50,591 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 189.00
+2025-11-20 11:38:50,592 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Potassium
+2025-11-20 11:38:50,592 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,592 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,592 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,593 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,593 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Somum
+2025-11-20 11:38:50,594 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,594 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,595 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,595 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,596 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Culture (OPD)
+2025-11-20 11:38:50,596 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,597 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1090.00
+2025-11-20 11:38:50,597 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 109.00
+2025-11-20 11:38:50,598 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 981.00
+2025-11-20 11:38:50,599 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Examination
+2025-11-20 11:38:50,599 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,600 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,600 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,601 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,602 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 11:38:50,603 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาตรวจวินิจฉัยทางเทคนิคการแพทย์
+2025-11-20 11:38:50,603 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 11:38:50,603 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3100.00
+2025-11-20 11:38:50,604 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 310.00
+2025-11-20 11:38:50,604 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2790.00
+2025-11-20 11:38:50,605 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ALT (Alanine Transaminase)(SGPT)
+2025-11-20 11:38:50,606 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,606 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,607 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,607 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,608 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Complete Blood Count.
+2025-11-20 11:38:50,608 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,609 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,609 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,609 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,610 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Glucose (Random)
+2025-11-20 11:38:50,610 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,611 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 210.00
+2025-11-20 11:38:50,611 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.00
+2025-11-20 11:38:50,612 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 189.00
+2025-11-20 11:38:50,612 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Potassium
+2025-11-20 11:38:50,613 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,613 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,613 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,614 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,615 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Somum
+2025-11-20 11:38:50,615 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,616 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,616 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,617 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,618 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Culture (OPD)
+2025-11-20 11:38:50,618 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,619 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1090.00
+2025-11-20 11:38:50,619 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 109.00
+2025-11-20 11:38:50,620 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 981.00
+2025-11-20 11:38:50,621 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Examination
+2025-11-20 11:38:50,621 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 11:38:50,622 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 11:38:50,622 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 11:38:50,622 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 11:38:50,623 - ai_simple_extraction - INFO - ✅ Built 5 hierarchical billing items from template
+2025-11-20 11:38:50,626 - api_server - INFO - ✅ JSON formatting completed
+2025-11-20 11:38:50,653 - api_server - INFO - 📝 API response saved: ./output\api_debug\responses\api_response_extract_text_20251120_113850_b8c3fdbb-38b9-46bd-a9b8-5da216d204a9.json
+2025-11-20 13:27:41,109 - __main__ - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-20 13:27:41,110 - __main__ - INFO - 📁 Log directory: ./logs
+2025-11-20 13:27:41,110 - __main__ - INFO - 📅 Max retention: 30 days
+2025-11-20 13:27:41,130 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-20 13:27:41,180 - api_server - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-20 13:27:41,180 - api_server - INFO - 📁 Log directory: ./logs
+2025-11-20 13:27:41,180 - api_server - INFO - 📅 Max retention: 30 days
+2025-11-20 13:27:41,193 - api_server - INFO - Initializing components in lifespan...
+2025-11-20 13:27:41,194 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 13:27:41,194 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 13:27:41,194 - api_server - INFO - Two-Step AI Pipeline initialized successfully
+2025-11-20 13:27:41,195 - multi_ocr_adapter - INFO - Initialized OCR engines: ['oneocr']
+2025-11-20 13:27:41,195 - api_server - INFO - Multi-OCR Manager initialized: ['oneocr']
+2025-11-20 13:27:41,195 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 13:27:41,196 - document_classifier - INFO - Loading document types from Template API...
+2025-11-20 13:27:41,196 - template_api_manager - INFO - Fetching all templates from API
+2025-11-20 13:27:41,198 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 13:27:41,428 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 13:27:41,430 - template_api_manager - DEBUG - Parsed template: HL0000055 - Statement from Hospital
+2025-11-20 13:27:41,431 - template_api_manager - DEBUG - Parsed template: HL0000043 - Other medical document
+2025-11-20 13:27:41,431 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 13:27:41,432 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-20 13:27:41,432 - template_api_manager - DEBUG - Parsed template: HL0000051 - E-Receipt
+2025-11-20 13:27:41,432 - template_api_manager - DEBUG - Parsed template: HL0000054 - Estimate Medical Expense report, GOP, guarantee email
+2025-11-20 13:27:41,433 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-20 13:27:41,433 - template_api_manager - INFO - Fetched 7 templates from API
+2025-11-20 13:27:41,434 - document_classifier - INFO - Loaded 7 document types from API: ['B07_STATEMENT', 'HL0000043_UNKNOWN', 'B05_HOSPITAL_DETAIL', 'B01_RECEIPT', 'HL0000051_UNKNOWN', 'B06_ESTIMATE_GOP', 'B04_INVOICE']
+2025-11-20 13:27:41,434 - api_server - INFO - Document Classifier initialized successfully
+2025-11-20 13:27:41,435 - api_server - INFO - Authentication Manager initialized successfully
+2025-11-20 13:27:41,435 - security_module - INFO - SECURITY: SYSTEM_STARTUP - {'timestamp': '2025-11-20T13:27:41.435398'}
+2025-11-20 16:15:20,363 - security_module - INFO - SECURITY: SYSTEM_SHUTDOWN - {'timestamp': '2025-11-20T16:15:20.361392'}
+2025-11-20 19:48:50,131 - __main__ - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-20 19:48:50,132 - __main__ - INFO - 📁 Log directory: ./logs
+2025-11-20 19:48:50,132 - __main__ - INFO - 📅 Max retention: 30 days
+2025-11-20 19:48:50,155 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-20 19:48:50,216 - api_server - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-20 19:48:50,216 - api_server - INFO - 📁 Log directory: ./logs
+2025-11-20 19:48:50,216 - api_server - INFO - 📅 Max retention: 30 days
+2025-11-20 19:48:50,228 - api_server - INFO - Initializing components in lifespan...
+2025-11-20 19:48:50,229 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 19:48:50,229 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 19:48:50,229 - api_server - INFO - Two-Step AI Pipeline initialized successfully
+2025-11-20 19:48:50,230 - multi_ocr_adapter - INFO - Initialized OCR engines: ['oneocr']
+2025-11-20 19:48:50,230 - api_server - INFO - Multi-OCR Manager initialized: ['oneocr']
+2025-11-20 19:48:50,230 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-20 19:48:50,230 - document_classifier - INFO - Loading document types from Template API...
+2025-11-20 19:48:50,230 - template_api_manager - INFO - Fetching all templates from API
+2025-11-20 19:48:50,232 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 19:48:50,351 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 19:48:50,354 - template_api_manager - DEBUG - Parsed template: HL0000055 - Statement from Hospital
+2025-11-20 19:48:50,355 - template_api_manager - DEBUG - Parsed template: HL0000043 - Other medical document
+2025-11-20 19:48:50,355 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 19:48:50,355 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-20 19:48:50,356 - template_api_manager - DEBUG - Parsed template: HL0000051 - E-Receipt
+2025-11-20 19:48:50,356 - template_api_manager - DEBUG - Parsed template: HL0000054 - Estimate Medical Expense report, GOP, guarantee email
+2025-11-20 19:48:50,357 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-20 19:48:50,358 - template_api_manager - INFO - Fetched 7 templates from API
+2025-11-20 19:48:50,360 - document_classifier - INFO - Loaded 7 document types from API: ['B07_STATEMENT', 'HL0000043_UNKNOWN', 'B05_HOSPITAL_DETAIL', 'B01_RECEIPT', 'HL0000051_UNKNOWN', 'B06_ESTIMATE_GOP', 'B04_INVOICE']
+2025-11-20 19:48:50,361 - api_server - INFO - Document Classifier initialized successfully
+2025-11-20 19:48:50,362 - api_server - INFO - Authentication Manager initialized successfully
+2025-11-20 19:48:50,363 - security_module - INFO - SECURITY: SYSTEM_STARTUP - {'timestamp': '2025-11-20T19:48:50.362953'}
+2025-11-20 19:49:10,268 - template_api_manager - INFO - Fetching all templates from API
+2025-11-20 19:49:10,271 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 19:49:10,359 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 19:49:10,360 - template_api_manager - DEBUG - Parsed template: HL0000055 - Statement from Hospital
+2025-11-20 19:49:10,361 - template_api_manager - DEBUG - Parsed template: HL0000043 - Other medical document
+2025-11-20 19:49:10,361 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 19:49:10,361 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-20 19:49:10,361 - template_api_manager - DEBUG - Parsed template: HL0000051 - E-Receipt
+2025-11-20 19:49:10,362 - template_api_manager - DEBUG - Parsed template: HL0000054 - Estimate Medical Expense report, GOP, guarantee email
+2025-11-20 19:49:10,362 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-20 19:49:10,362 - template_api_manager - INFO - Fetched 7 templates from API
+2025-11-20 19:50:20,403 - api_server - INFO - 📥 Received request from 127.0.0.1: ocr_texts=1 items, form_id=HL0000053
+2025-11-20 19:50:20,404 - api_server - INFO - Processing 1 OCR texts with Form ID: HL0000053
+2025-11-20 19:50:20,404 - template_api_manager - INFO - Getting template for Form ID: HL0000053
+2025-11-20 19:50:20,405 - template_api_manager - INFO - Fetching template from API: HL0000053 (attempt 1/3)
+2025-11-20 19:50:20,406 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 19:50:20,520 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 19:50:20,522 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 19:50:20,523 - template_api_manager - INFO - Template fetched successfully: HL0000053
+2025-11-20 19:50:20,523 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-20 19:50:20,524 - template_api_manager - DEBUG - Cached template for formId: HL0000053
+2025-11-20 19:50:20,525 - api_server - INFO - Template loaded: Detail of invoice (Form ID: HL0000053)
+2025-11-20 19:50:20,525 - api_server - INFO - 📤 Sending OCR text to AI API for extraction...
+2025-11-20 19:50:20,526 - template_api_manager - INFO - Getting template for Form ID: HL0000053
+2025-11-20 19:50:20,527 - template_api_manager - INFO - Fetching template from API: HL0000053 (attempt 1/3)
+2025-11-20 19:50:20,528 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-20 19:50:20,623 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-20 19:50:20,625 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-20 19:50:20,625 - template_api_manager - INFO - Template fetched successfully: HL0000053
+2025-11-20 19:50:20,626 - security_module - INFO - SECURITY: TEMPLATE_API_SUCCESS - system
+2025-11-20 19:50:20,627 - template_api_manager - DEBUG - Cached template for formId: HL0000053
+2025-11-20 19:50:20,631 - ai_simple_extraction - INFO - AI request saved: ./output/ai_debug/requests\request_20251120_195020_6209e991.json
+2025-11-20 19:50:20,631 - ai_simple_extraction - INFO - 🔍 Calling AI API (attempt 1/3)
+2025-11-20 19:50:20,634 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): qdoc.ecmxpert.com:44444
+2025-11-20 19:52:04,645 - urllib3.connectionpool - DEBUG - http://qdoc.ecmxpert.com:44444 "POST /v1/chat/completions HTTP/1.1" 200 4394
+2025-11-20 19:52:04,651 - ai_simple_extraction - INFO - AI response saved: ./output/ai_debug/responses\response_20251120_195020_6209e991.json
+2025-11-20 19:52:04,651 - ai_simple_extraction - INFO - 📝 AI Response (first 500 chars): [K] hospital_name | โรงพยาบาลกรุงเทพ  
+[K] hn | 04-04-021008  
+[K] an | 104-21-010742  
+[K] admission_date | 23/08/2021  
+[K] patient_name | นาย วรากร ผอบแก้ว  
+[K] vn_en | 104-21-010742  
+[K] amount_total | 15965.00  
+[K] discount_total | 1890.00  
+[K] net_amount_total | 14075.00  
+
+[L1] 1.1.1 | คายาและสารอาหารทางเสนเลือด | 2146.00 | 214.60 | 1931.40  
+[L2] 1.1.1(18) | คานำเกลือ | 2146.00 | 214.60 | 1931.40  
+[L3] D-5-S/2 (no set) SOFT BAGS (1000 mL) | 2 Bag | 1410.00 | 141.00 | 1269.00  
+[L3] 
+2025-11-20 19:52:04,657 - ai_simple_extraction - INFO - ✅ Parsed 5 billing items
+2025-11-20 19:52:04,658 - ai_simple_extraction - INFO - ✅ Extraction completed (attempt 1): 5 billing items, 10 other fields
+2025-11-20 19:52:04,659 - api_server - INFO - ✅ AI extraction completed: 5 billing items extracted
+2025-11-20 19:52:04,659 - api_server - INFO - 🔄 Mapping extracted keys to template_json structure...
+2025-11-20 19:52:04,659 - ai_simple_extraction - INFO - Using document_code from template API: HL0000053
+2025-11-20 19:52:04,660 - ai_simple_extraction - INFO - Using document_type from template API: Detail of invoice
+2025-11-20 19:52:04,660 - ai_simple_extraction - INFO - Using template_structure parsed from API
+2025-11-20 19:52:04,661 - ai_simple_extraction - INFO - 📋 Template structure loaded: {
+  "documents": [
+    {
+      "page": "",
+      "total_page": "",
+      "document_code": "HL0000053",
+      "document_info": [
+        {
+          "code": "hospital_name",
+          "page": "",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "hn",
+          "page": "",
+          "type": "string",
+          "value": "",
+          "accuracyRate": null
+        },
+        {
+          "code": "an",
+          "page": "",
+       ...
+2025-11-20 19:52:04,662 - ai_simple_extraction - INFO - 📋 Template has 10 document_info fields
+2025-11-20 19:52:04,662 - ai_simple_extraction - INFO - 📋 Billing items template structure: 1 template items
+2025-11-20 19:52:04,663 - ai_simple_extraction - INFO - 📋 First billing item template: {
+  "code": "billing_item",
+  "page": "",
+  "type": "array",
+  "value": [
+    {
+      "code": "billing_code",
+      "page": "",
+      "type": "string",
+      "value": "",
+      "accuracyRate": null
+    },
+    {
+      "code": "billing_desc",
+      "page": "",
+      "type": "string",
+      "value": ""...
+2025-11-20 19:52:04,664 - ai_simple_extraction - INFO - Building billing items: extracted_count=5, template_count=1
+2025-11-20 19:52:04,665 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1
+2025-11-20 19:52:04,665 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายาและสารอาหารทางเสนเลือด
+2025-11-20 19:52:04,665 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 19:52:04,666 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2146.00
+2025-11-20 19:52:04,666 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 214.60
+2025-11-20 19:52:04,666 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1931.40
+2025-11-20 19:52:04,667 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(18)
+2025-11-20 19:52:04,667 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คานำเกลือ
+2025-11-20 19:52:04,667 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,667 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2146.00
+2025-11-20 19:52:04,668 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 214.60
+2025-11-20 19:52:04,668 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1931.40
+2025-11-20 19:52:04,668 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: D-5-S/2 (no set) SOFT BAGS (1000 mL)
+2025-11-20 19:52:04,669 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,669 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1410.00
+2025-11-20 19:52:04,670 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 141.00
+2025-11-20 19:52:04,670 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1269.00
+2025-11-20 19:52:04,671 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H.S.S (100 ml) Injection
+2025-11-20 19:52:04,671 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,671 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 736.00
+2025-11-20 19:52:04,672 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 73.60
+2025-11-20 19:52:04,672 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 662.40
+2025-11-20 19:52:04,673 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(18)
+2025-11-20 19:52:04,674 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คานำเกลือ
+2025-11-20 19:52:04,674 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,674 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 2146.00
+2025-11-20 19:52:04,675 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 214.60
+2025-11-20 19:52:04,675 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1931.40
+2025-11-20 19:52:04,676 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: D-5-S/2 (no set) SOFT BAGS (1000 mL)
+2025-11-20 19:52:04,676 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,676 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1410.00
+2025-11-20 19:52:04,677 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 141.00
+2025-11-20 19:52:04,677 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1269.00
+2025-11-20 19:52:04,678 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H.S.S (100 ml) Injection
+2025-11-20 19:52:04,678 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,679 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 736.00
+2025-11-20 19:52:04,679 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 73.60
+2025-11-20 19:52:04,679 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 662.40
+2025-11-20 19:52:04,680 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1
+2025-11-20 19:52:04,680 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายา
+2025-11-20 19:52:04,681 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 19:52:04,681 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 6716.00
+2025-11-20 19:52:04,682 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 671.60
+2025-11-20 19:52:04,682 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 6044.40
+2025-11-20 19:52:04,682 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-20 19:52:04,682 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายา
+2025-11-20 19:52:04,683 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,683 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 19:52:04,684 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,684 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 19:52:04,684 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 19:52:04,685 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,685 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 19:52:04,685 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 8.40
+2025-11-20 19:52:04,686 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 75.60
+2025-11-20 19:52:04,686 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 19:52:04,686 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,687 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 100.00
+2025-11-20 19:52:04,687 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 10.00
+2025-11-20 19:52:04,688 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 90.00
+2025-11-20 19:52:04,688 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 19:52:04,689 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,689 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 185.00
+2025-11-20 19:52:04,689 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 18.50
+2025-11-20 19:52:04,690 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 166.50
+2025-11-20 19:52:04,690 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 19:52:04,691 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,691 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 212.00
+2025-11-20 19:52:04,692 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.20
+2025-11-20 19:52:04,692 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 190.80
+2025-11-20 19:52:04,693 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Hidrasec (100 mg) Cap - เม็ด
+2025-11-20 19:52:04,693 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,693 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 352.00
+2025-11-20 19:52:04,694 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 35.20
+2025-11-20 19:52:04,694 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 316.80
+2025-11-20 19:52:04,694 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H ybutyl inj. - Buscopan ฉีด
+2025-11-20 19:52:04,695 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,695 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 857.00
+2025-11-20 19:52:04,696 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 85.70
+2025-11-20 19:52:04,696 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 771.30
+2025-11-20 19:52:04,696 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: KetoLAC Inj (30 mg)
+2025-11-20 19:52:04,697 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,697 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 788.00
+2025-11-20 19:52:04,698 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 78.80
+2025-11-20 19:52:04,698 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 709.20
+2025-11-20 19:52:04,698 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Meicelin Injection (1 gm)
+2025-11-20 19:52:04,699 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,699 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 4120.00
+2025-11-20 19:52:04,699 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 412.00
+2025-11-20 19:52:04,700 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 3708.00
+2025-11-20 19:52:04,700 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ropermide Cap (2mg)- Imodium -
+2025-11-20 19:52:04,700 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,701 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 18.00
+2025-11-20 19:52:04,701 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 1.80
+2025-11-20 19:52:04,702 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 16.20
+2025-11-20 19:52:04,702 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.11
+2025-11-20 19:52:04,702 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คายา
+2025-11-20 19:52:04,703 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,703 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 19:52:04,703 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,704 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 19:52:04,704 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 19:52:04,705 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,705 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 19:52:04,705 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 8.40
+2025-11-20 19:52:04,706 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 75.60
+2025-11-20 19:52:04,706 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 19:52:04,707 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,707 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 100.00
+2025-11-20 19:52:04,708 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 10.00
+2025-11-20 19:52:04,708 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 90.00
+2025-11-20 19:52:04,709 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 19:52:04,709 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,710 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 185.00
+2025-11-20 19:52:04,710 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 18.50
+2025-11-20 19:52:04,710 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 166.50
+2025-11-20 19:52:04,711 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 19:52:04,711 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,712 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 212.00
+2025-11-20 19:52:04,712 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.20
+2025-11-20 19:52:04,712 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 190.80
+2025-11-20 19:52:04,713 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Hidrasec (100 mg) Cap - เม็ด
+2025-11-20 19:52:04,714 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,714 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 352.00
+2025-11-20 19:52:04,715 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 35.20
+2025-11-20 19:52:04,715 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 316.80
+2025-11-20 19:52:04,716 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: H ybutyl inj. - Buscopan ฉีด
+2025-11-20 19:52:04,716 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,717 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 857.00
+2025-11-20 19:52:04,717 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 85.70
+2025-11-20 19:52:04,717 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 771.30
+2025-11-20 19:52:04,717 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: KetoLAC Inj (30 mg)
+2025-11-20 19:52:04,718 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,718 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 788.00
+2025-11-20 19:52:04,718 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 78.80
+2025-11-20 19:52:04,718 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 709.20
+2025-11-20 19:52:04,719 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Meicelin Injection (1 gm)
+2025-11-20 19:52:04,719 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,720 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 4120.00
+2025-11-20 19:52:04,720 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 412.00
+2025-11-20 19:52:04,721 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 3708.00
+2025-11-20 19:52:04,721 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ropermide Cap (2mg)- Imodium -
+2025-11-20 19:52:04,721 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,722 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 18.00
+2025-11-20 19:52:04,722 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 1.80
+2025-11-20 19:52:04,722 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 16.20
+2025-11-20 19:52:04,723 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(2)
+2025-11-20 19:52:04,723 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยากลับบาน (Home Medication)
+2025-11-20 19:52:04,724 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 19:52:04,724 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 849.00
+2025-11-20 19:52:04,725 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 84.90
+2025-11-20 19:52:04,726 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 764.10
+2025-11-20 19:52:04,726 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(2)1
+2025-11-20 19:52:04,726 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยากลับบาน (Home Medication)
+2025-11-20 19:52:04,726 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,727 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 19:52:04,727 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,728 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 19:52:04,728 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 19:52:04,729 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,730 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 50.00
+2025-11-20 19:52:04,730 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 5.00
+2025-11-20 19:52:04,731 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 45.00
+2025-11-20 19:52:04,731 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 19:52:04,732 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,732 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 48.00
+2025-11-20 19:52:04,732 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.80
+2025-11-20 19:52:04,732 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 43.20
+2025-11-20 19:52:04,733 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ciprobay Tab * * 500 mg * * -O-
+2025-11-20 19:52:04,733 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,733 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 464.00
+2025-11-20 19:52:04,734 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 46.40
+2025-11-20 19:52:04,734 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 417.60
+2025-11-20 19:52:04,734 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 19:52:04,735 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,735 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 95.00
+2025-11-20 19:52:04,736 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 9.50
+2025-11-20 19:52:04,736 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 85.50
+2025-11-20 19:52:04,737 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 19:52:04,738 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,738 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 152.00
+2025-11-20 19:52:04,739 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 15.20
+2025-11-20 19:52:04,739 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 136.80
+2025-11-20 19:52:04,740 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PARAMED * * 500 mg * * Tablet -- เม็ด --
+2025-11-20 19:52:04,741 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,741 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 40.00
+2025-11-20 19:52:04,742 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.00
+2025-11-20 19:52:04,742 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 36.00
+2025-11-20 19:52:04,742 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.1(2)1
+2025-11-20 19:52:04,743 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ยากลับบาน (Home Medication)
+2025-11-20 19:52:04,743 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,743 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 19:52:04,744 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,744 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 19:52:04,745 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: AIR-X Tablet * (120 mg) * - สีทอง-
+2025-11-20 19:52:04,746 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,746 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 50.00
+2025-11-20 19:52:04,747 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 5.00
+2025-11-20 19:52:04,747 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 45.00
+2025-11-20 19:52:04,748 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Buscopan Tablet (10 mg)
+2025-11-20 19:52:04,748 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,749 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 48.00
+2025-11-20 19:52:04,749 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.80
+2025-11-20 19:52:04,749 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 43.20
+2025-11-20 19:52:04,750 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Ciprobay Tab * * 500 mg * * -O-
+2025-11-20 19:52:04,750 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,751 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 464.00
+2025-11-20 19:52:04,751 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 46.40
+2025-11-20 19:52:04,752 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 417.60
+2025-11-20 19:52:04,752 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Electrolyte Powder (ORS) Orange
+2025-11-20 19:52:04,753 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,753 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 95.00
+2025-11-20 19:52:04,754 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 9.50
+2025-11-20 19:52:04,754 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 85.50
+2025-11-20 19:52:04,755 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: GASmotin TABLET (5 mg)-GASmotin-
+2025-11-20 19:52:04,755 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,756 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 152.00
+2025-11-20 19:52:04,756 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 15.20
+2025-11-20 19:52:04,757 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 136.80
+2025-11-20 19:52:04,758 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PARAMED * * 500 mg * * Tablet -- เม็ด --
+2025-11-20 19:52:04,758 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,759 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 40.00
+2025-11-20 19:52:04,759 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 4.00
+2025-11-20 19:52:04,759 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 36.00
+2025-11-20 19:52:04,760 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2
+2025-11-20 19:52:04,761 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาเวชภัณฑ์
+2025-11-20 19:52:04,761 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 19:52:04,761 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1906.00
+2025-11-20 19:52:04,762 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,762 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1906.00
+2025-11-20 19:52:04,763 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2(1)
+2025-11-20 19:52:04,763 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: เวชภัณฑ์ 1 วัสดุสิ้นเปลืองทางการแพทย์
+2025-11-20 19:52:04,764 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,764 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1906.00
+2025-11-20 19:52:04,764 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,765 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1906.00
+2025-11-20 19:52:04,765 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Cotton Sterile 0.35 Gm (3 Pcs/)
+2025-11-20 19:52:04,765 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,766 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 6.00
+2025-11-20 19:52:04,766 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,766 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 6.00
+2025-11-20 19:52:04,767 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Curos Stopper Cap (CSAI-270)
+2025-11-20 19:52:04,767 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,767 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 19:52:04,767 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,768 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 19:52:04,769 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Extention Set With T
+2025-11-20 19:52:04,769 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,769 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 242.00
+2025-11-20 19:52:04,770 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,770 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 242.00
+2025-11-20 19:52:04,770 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: I.V. Catheter (Jelco) #24 (1X50)
+2025-11-20 19:52:04,770 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,771 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 274.00
+2025-11-20 19:52:04,771 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,771 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 274.00
+2025-11-20 19:52:04,772 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: IV SET AV (TYPE-500)
+2025-11-20 19:52:04,772 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,773 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 222.00
+2025-11-20 19:52:04,773 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,774 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 222.00
+2025-11-20 19:52:04,775 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Iv Set Model Infusomat Space Line With Injection Port
+2025-11-20 19:52:04,775 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,775 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 429.00
+2025-11-20 19:52:04,776 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,776 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 429.00
+2025-11-20 19:52:04,777 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PIV KIT With Tegaderm (setผู้ ใหญ่ )
+2025-11-20 19:52:04,777 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,778 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 153.00
+2025-11-20 19:52:04,778 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,779 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 153.00
+2025-11-20 19:52:04,779 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Syringr 10 MI (Disp.)
+2025-11-20 19:52:04,779 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,780 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 168.00
+2025-11-20 19:52:04,781 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,781 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 168.00
+2025-11-20 19:52:04,782 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Thermometer Probe Cover Sheath (Digital)
+2025-11-20 19:52:04,782 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,782 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 19:52:04,783 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,783 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 34.00
+2025-11-20 19:52:04,784 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Three Ways W/O Lock
+2025-11-20 19:52:04,784 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,785 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 250.00
+2025-11-20 19:52:04,786 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,786 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 250.00
+2025-11-20 19:52:04,787 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Waterproof Bandage
+2025-11-20 19:52:04,787 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,788 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 19:52:04,788 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,789 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 19:52:04,790 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.2(1)
+2025-11-20 19:52:04,790 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: เวชภัณฑ์ 1 วัสดุสิ้นเปลืองทางการแพทย์
+2025-11-20 19:52:04,791 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,792 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1906.00
+2025-11-20 19:52:04,792 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,792 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 1906.00
+2025-11-20 19:52:04,793 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Cotton Sterile 0.35 Gm (3 Pcs/)
+2025-11-20 19:52:04,793 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,793 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 6.00
+2025-11-20 19:52:04,794 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,794 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 6.00
+2025-11-20 19:52:04,795 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Curos Stopper Cap (CSAI-270)
+2025-11-20 19:52:04,795 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,795 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 19:52:04,796 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,796 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 19:52:04,797 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Extention Set With T
+2025-11-20 19:52:04,797 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,798 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 242.00
+2025-11-20 19:52:04,798 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,798 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 242.00
+2025-11-20 19:52:04,798 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: I.V. Catheter (Jelco) #24 (1X50)
+2025-11-20 19:52:04,799 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,799 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 274.00
+2025-11-20 19:52:04,800 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,800 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 274.00
+2025-11-20 19:52:04,801 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: IV SET AV (TYPE-500)
+2025-11-20 19:52:04,801 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,802 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 222.00
+2025-11-20 19:52:04,802 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,803 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 222.00
+2025-11-20 19:52:04,803 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Iv Set Model Infusomat Space Line With Injection Port
+2025-11-20 19:52:04,804 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,804 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 429.00
+2025-11-20 19:52:04,805 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,805 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 429.00
+2025-11-20 19:52:04,806 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: PIV KIT With Tegaderm (setผู้ ใหญ่ )
+2025-11-20 19:52:04,807 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,807 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 153.00
+2025-11-20 19:52:04,808 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,809 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 153.00
+2025-11-20 19:52:04,809 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Syringr 10 MI (Disp.)
+2025-11-20 19:52:04,810 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,810 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 168.00
+2025-11-20 19:52:04,811 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,811 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 168.00
+2025-11-20 19:52:04,812 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Thermometer Probe Cover Sheath (Digital)
+2025-11-20 19:52:04,812 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,813 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 84.00
+2025-11-20 19:52:04,813 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,814 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 34.00
+2025-11-20 19:52:04,815 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Three Ways W/O Lock
+2025-11-20 19:52:04,815 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,816 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 250.00
+2025-11-20 19:52:04,816 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,817 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 250.00
+2025-11-20 19:52:04,818 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Waterproof Bandage
+2025-11-20 19:52:04,818 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,819 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 39.00
+2025-11-20 19:52:04,819 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,820 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 39.00
+2025-11-20 19:52:04,820 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 19:52:04,821 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาตรวจวินิจฉัยทางเทคนิคการแพทย์และพยาธิวิทยา
+2025-11-20 19:52:04,821 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 1
+2025-11-20 19:52:04,822 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3100.00
+2025-11-20 19:52:04,822 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 310.00
+2025-11-20 19:52:04,823 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2790.00
+2025-11-20 19:52:04,824 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 19:52:04,824 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาตรวจวินิจฉัยทางเทคนิคการแพทย์
+2025-11-20 19:52:04,825 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,825 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3100.00
+2025-11-20 19:52:04,825 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 310.00
+2025-11-20 19:52:04,826 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2790.00
+2025-11-20 19:52:04,826 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ALT (Alanine Transaminase)(SGPT)
+2025-11-20 19:52:04,827 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,828 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,828 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,829 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,829 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Complete Blood Count.
+2025-11-20 19:52:04,830 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,830 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,830 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,831 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,831 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Glucose (Random)
+2025-11-20 19:52:04,832 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,832 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 210.00
+2025-11-20 19:52:04,832 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.00
+2025-11-20 19:52:04,833 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 189.00
+2025-11-20 19:52:04,833 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Potassium
+2025-11-20 19:52:04,834 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,835 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,835 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,836 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,836 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Somum
+2025-11-20 19:52:04,837 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,837 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,838 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,838 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,838 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Culture (OPD)
+2025-11-20 19:52:04,839 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,839 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1090.00
+2025-11-20 19:52:04,840 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 109.00
+2025-11-20 19:52:04,840 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 981.00
+2025-11-20 19:52:04,841 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Examination
+2025-11-20 19:52:04,842 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,842 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,843 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,843 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,844 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: FM-CAS-25(01) /2
+2025-11-20 19:52:04,845 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,845 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 19:52:04,846 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,846 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 19:52:04,847 - ai_simple_extraction - DEBUG - Mapped field billing_code from AI field billing_code: 1.1.4
+2025-11-20 19:52:04,848 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: คาตรวจวินิจฉัยทางเทคนิคการแพทย์
+2025-11-20 19:52:04,848 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 2
+2025-11-20 19:52:04,849 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 3100.00
+2025-11-20 19:52:04,849 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 310.00
+2025-11-20 19:52:04,849 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 2790.00
+2025-11-20 19:52:04,850 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: ALT (Alanine Transaminase)(SGPT)
+2025-11-20 19:52:04,851 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,851 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,851 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,852 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,852 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Complete Blood Count.
+2025-11-20 19:52:04,853 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,853 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,854 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,854 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,855 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Glucose (Random)
+2025-11-20 19:52:04,855 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,856 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 210.00
+2025-11-20 19:52:04,856 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 21.00
+2025-11-20 19:52:04,857 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 189.00
+2025-11-20 19:52:04,857 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Potassium
+2025-11-20 19:52:04,858 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,858 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,859 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,859 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,859 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Somum
+2025-11-20 19:52:04,860 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,860 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,861 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,861 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,862 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Culture (OPD)
+2025-11-20 19:52:04,862 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,863 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 1090.00
+2025-11-20 19:52:04,863 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 109.00
+2025-11-20 19:52:04,864 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 981.00
+2025-11-20 19:52:04,865 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: Stool Examination
+2025-11-20 19:52:04,865 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,865 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 300.00
+2025-11-20 19:52:04,866 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 30.00
+2025-11-20 19:52:04,866 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 270.00
+2025-11-20 19:52:04,867 - ai_simple_extraction - DEBUG - Mapped field billing_desc from AI field billing_desc: FM-CAS-25(01) /2
+2025-11-20 19:52:04,868 - ai_simple_extraction - DEBUG - Mapped field item_level from AI field item_level: 3
+2025-11-20 19:52:04,868 - ai_simple_extraction - DEBUG - Mapped field amount from AI field amount: 0.00
+2025-11-20 19:52:04,869 - ai_simple_extraction - DEBUG - Mapped field discount from AI field discount: 0.00
+2025-11-20 19:52:04,869 - ai_simple_extraction - DEBUG - Mapped field net_amount from AI field net_amount: 0.00
+2025-11-20 19:52:04,870 - ai_simple_extraction - INFO - ✅ Built 5 hierarchical billing items from template
+2025-11-20 19:52:04,873 - api_server - INFO - ✅ JSON formatting completed
+2025-11-20 19:52:04,899 - api_server - INFO - 📝 API response saved: ./output\api_debug\responses\api_response_extract_text_20251120_195204_bda9a46f-433a-4cec-9f42-fb7a157d6a4a.json

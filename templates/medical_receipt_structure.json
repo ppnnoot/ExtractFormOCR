@@ -1,0 +1,144 @@
+{
+  "document_type": "Medical Receipt",
+  "description": "AI extraction template for Thai medical receipts",
+  "output_format": {
+    "extraction_type": "Medical Receipt",
+    "confidence": 0.0,
+    "extracted_data": {
+      "document_code": "CM0000095",
+      "document_type": "Medical Receipt",
+      "need_correction": false,
+      "total_page": "1",
+      "page": "1",
+      "document_info": [
+        {
+          "accuracyRate": 90,
+          "type": "string",
+          "code": "hospital_name",
+          "value": "-",
+          "page": "1",
+          "description": "ชื่อโรงพยาบาล"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "string",
+          "code": "hn",
+          "value": "-",
+          "page": "1",
+          "description": "Hospital Number (HN)"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "string",
+          "code": "an",
+          "value": "-",
+          "page": "1",
+          "description": "Admission Number (AN) or Encounter Number (EN)"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "decimal",
+          "code": "gross_amount",
+          "value": "-",
+          "page": "1",
+          "description": "ยอดรวมก่อนหักส่วนลด"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "integer",
+          "code": "number_of_admit",
+          "value": "-",
+          "page": "1",
+          "description": "จำนวนครั้งที่เข้ารับการรักษา"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "date",
+          "code": "admission_date",
+          "value": "-",
+          "page": "1",
+          "description": "วันที่เข้ารับการรักษา (รูปแบบ DD/MM/YYYY)"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "date",
+          "code": "discharge_date",
+          "value": "-",
+          "page": "1",
+          "description": "วันที่จำหน่าย (รูปแบบ DD/MM/YYYY)"
+        },
+        {
+          "accuracyRate": 90,
+          "type": "array",
+          "code": "billing_items",
+          "page": "1",
+          "description": "รายการค่าใช้จ่าย",
+          "value": [
+            {
+              "accuracyRate": 90,
+              "type": "array",
+              "code": "billing_item",
+              "page": "1",
+              "value": [
+                {
+                  "type": "string",
+                  "code": "billing_code",
+                  "accuracyRate": 90,
+                  "value": "-",
+                  "page": "1",
+                  "description": "รหัสรายการ (เช่น 1.1, 1.1.1)"
+                },
+                {
+                  "type": "string",
+                  "code": "billing_desc",
+                  "accuracyRate": 90,
+                  "value": "-",
+                  "page": "1",
+                  "description": "รายละเอียดรายการ"
+                },
+                {
+                  "type": "decimal",
+                  "code": "amount",
+                  "accuracyRate": 90,
+                  "value": "-",
+                  "page": "1",
+                  "description": "จำนวนเงิน"
+                },
+                {
+                  "type": "decimal",
+                  "code": "discount",
+                  "accuracyRate": 90,
+                  "value": "-",
+                  "page": "1",
+                  "description": "ส่วนลด"
+                },
+                {
+                  "type": "decimal",
+                  "code": "net_amount",
+                  "accuracyRate": 90,
+                  "value": "-",
+                  "page": "1",
+                  "description": "จำนวนเงินสุทธิ"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "metadata": {
+      "source_length": 0,
+      "processing_time": 0,
+      "detected_language": "th",
+      "entities_found": []
+    }
+  },
+  "extraction_instructions": {
+    "hospital_name": "ค้นหาชื่อโรงพยาบาล โดยทั่วไปจะอยู่ด้านบนสุดของเอกสาร",
+    "hn": "ค้นหา HN: หรือ Hospital Number ตามด้วยตัวเลข",
+    "an": "ค้นหา AN:, EN:, หรือ Admission/Encounter Number ตามด้วยตัวเลข",
+    "gross_amount": "ค้นหายอดรวมก่อนหักส่วนลด",
+    "admission_date": "ค้นหาวันที่เข้ารับการรักษา ในรูปแบบ DD/MM/YYYY",
+    "billing_items": "ค้นหารายการค่าใช้จ่ายทั้งหมด โดยแต่ละรายการจะมีรหัส (เช่น 1.1, 1.1.1) ตามด้วยรายละเอียด จำนวนเงิน ส่วนลด และจำนวนเงินสุทธิ (ถ้ามี)"
+  }
+}

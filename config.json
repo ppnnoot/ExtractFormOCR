@@ -1,0 +1,180 @@
+{
+  "project": {
+    "name": "AI-Powered OCR Pipeline",
+    "version": "1.0.0",
+    "description": "Multi-engine OCR with AI-powered extraction"
+  },
+  "ocr": {
+    "offline_only": true,
+    "engines": {
+      "oneocr": {
+        "enabled": true,
+        "priority": 1,
+        "dll_path": "./oneocr.dll",
+        "model_path": "./oneocr.onemodel",
+        "preprocessing": {
+          "denoise": true,
+          "enhance": true,
+          "deskew": true
+        }
+      },
+      "easyocr": {
+        "enabled": false,
+        "priority": 2,
+        "languages": [
+          "en",
+          "th"
+        ],
+        "gpu": false,
+        "model_storage_directory": ""
+      },
+      "paddleocr": {
+        "enabled": false,
+        "priority": 3,
+        "use_angle_cls": true,
+        "use_gpu": false,
+        "lang": "en",
+        "det_model_dir": "",
+        "rec_model_dir": "",
+        "cls_model_dir": "",
+        "rec_char_dict_path": ""
+      }
+    },
+    "fallback_enabled": true,
+    "timeout": 30
+  },
+  "spatial_analysis": {
+    "line_threshold": 20,
+    "column_threshold": 50,
+    "table_detection": {
+      "enabled": true,
+      "min_cells": 4,
+      "min_rows": 2
+    },
+    "visualization": {
+      "enabled": true,
+      "output_dir": "./output/visualizations",
+      "save_bbox": true,
+      "show_relationships": true
+    }
+  },
+  "ai_extraction": {
+    "api": {
+      "endpoint": "http://qdoc.ecmxpert.com:44444/v1/chat/completions",
+      "model": "qwen3-instruct-2507",
+      "timeout": 1200,
+      "max_retries": 3,
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "max_tokens": 20000,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "auth_token": "gpustack_4c8db30d26e40380_2e4a11cbb8719050598e3b8b12173fe4"
+    },
+    "response_format": "simple_list",
+    "simple_list_max_tokens": 10000,
+    "quality_threshold": 0.5,
+    "fallback_to_rule": true,
+    "include_spatial_info": false,
+    "prompt_optimization": {
+      "text_only_mode": true,
+      "max_ocr_results": 999999,
+      "sort_by_position": true,
+      "filter_low_confidence": false,
+      "confidence_threshold": 0.3,
+      "deduplicate_billing_items": true
+    },
+    "parallel_processing": {
+      "enabled": false,
+      "max_concurrent_requests": 10,
+      "batch_size": 5,
+      "timeout_per_request": null,
+      "retry_failed": true,
+      "max_retries_per_receipt": 2
+    }
+  },
+  "extraction": {
+    "mode": "hybrid",
+    "ai_quality_threshold": 0.5,
+    "prefer_ai": true,
+    "cache_enabled": true,
+    "cache_ttl": 3600
+  },
+  "templates": {
+    "api": {
+      "url": "https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId",
+      "timeout": 30,
+      "max_retries": 3,
+      "enabled": true
+    },
+    "cache_enabled": true,
+    "cache_ttl": 60,
+    "fallback_enabled": false,
+    "directory": "./templates",
+    "default": "medical_receipt",
+    "auto_load": true,
+    "form_id_mapping": {
+      "medical_receipt": "HL0000050",
+      "receipt": "HL0000050",
+      "invoice": "HL0000052",
+      "detail": "HL0000053",
+      "estimate": "HL0000054",
+      "statement": "HL0000055"
+    }
+  },
+  "output": {
+    "directory": "./output",
+    "formats": [
+      "json"
+    ],
+    "save_raw_ocr": true,
+    "save_spatial_analysis": true,
+    "include_metadata": true,
+    "save_api_responses": true
+  },
+  "logging": {
+    "enabled": true,
+    "log_directory": "./logs",
+    "max_days": 30,
+    "level": "DEBUG",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "rotation": {
+      "max_bytes": 10485760,
+      "backup_count": 5
+    },
+    "cleanup": {
+      "enabled": true,
+      "schedule": "daily"
+    }
+  },
+  "performance": {
+    "batch_size": 10,
+    "max_workers": 4,
+    "memory_limit": "2GB"
+  },
+  "security": {
+    "enabled": false,
+    "input_validation": {
+      "max_input_size": 500000,
+      "allow_null_bytes": false
+    },
+    "prompt_injection": {
+      "enabled": true,
+      "punctuation_threshold": 0.5,
+      "repetition_threshold": 0.3,
+      "log_detections": true
+    },
+    "rate_limiting": {
+      "enabled": true,
+      "requests_per_minute": 60,
+      "requests_per_hour": 1000
+    },
+    "hybrid_classification": {
+      "enabled": true,
+      "confidence_threshold": 60.0,
+      "force_ai_validation": true,
+      "weight_based_weight": 0.7,
+      "ai_weight": 0.3
+    }
+  }
+}

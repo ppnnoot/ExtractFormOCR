@@ -1,0 +1,511 @@
+{
+  "success": true,
+  "data": {
+    "documents": [
+      {
+        "page": "1",
+        "total_page": "1",
+        "document_code": "HL0000054",
+        "document_info": [
+          {
+            "code": "notification_no",
+            "page": "1",
+            "type": "string",
+            "value": "KAL20241211827",
+            "accuracyRate": null
+          },
+          {
+            "code": "claim_no",
+            "page": "1",
+            "type": "string",
+            "value": "บริษัทรับประกัน : บริษัท กรุงไทย - แอกซ่า ประกัน ชีวิต จำกัด (มหาชน)",
+            "accuracyRate": null
+          },
+          {
+            "code": "fund_name",
+            "page": "1",
+            "type": "string",
+            "value": "บริษัท กรุงไทย - แอกซ่า ประกันชีวิต จำกัด (มหาชน)",
+            "accuracyRate": null
+          },
+          {
+            "code": "patient_name",
+            "page": "1",
+            "type": "string",
+            "value": "น.ส.อัมพิกา เดียบัวแก้ว",
+            "accuracyRate": null
+          },
+          {
+            "code": "plan_name",
+            "page": "1",
+            "type": "string",
+            "value": "MEH7B64",
+            "accuracyRate": null
+          },
+          {
+            "code": "policyno",
+            "page": "1",
+            "type": "string",
+            "value": "509-4787602",
+            "accuracyRate": null
+          },
+          {
+            "code": "certification_no",
+            "page": "1",
+            "type": "string",
+            "value": "Cer No :",
+            "accuracyRate": null
+          },
+          {
+            "code": "family_no",
+            "page": "1",
+            "type": "string",
+            "value": "Family No : TO",
+            "accuracyRate": null
+          },
+          {
+            "code": "hospital_name",
+            "page": "1",
+            "type": "string",
+            "value": "จุฬาลงกรณ์",
+            "accuracyRate": null
+          },
+          {
+            "code": "hospital_address",
+            "page": "1",
+            "type": "string",
+            "value": "1873 ถนนพระราม 4 ปทุมวัน ปทุมวัน กรุงเทพมหานคร ไทย",
+            "accuracyRate": null
+          },
+          {
+            "code": "hospital_tel",
+            "page": "1",
+            "type": "string",
+            "value": "0 2649 4000",
+            "accuracyRate": null
+          },
+          {
+            "code": "hopital_fax",
+            "page": "1",
+            "type": "string",
+            "value": "โทรสาร :",
+            "accuracyRate": null
+          },
+          {
+            "code": "patient_fax",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "hn",
+            "page": "1",
+            "type": "string",
+            "value": "100015/59",
+            "accuracyRate": null
+          },
+          {
+            "code": "an",
+            "page": "1",
+            "type": "string",
+            "value": "52092/67",
+            "accuracyRate": null
+          },
+          {
+            "code": "admission_date",
+            "page": "1",
+            "type": "datetime",
+            "value": "03/12/2024",
+            "accuracyRate": null
+          },
+          {
+            "code": "discharge_date",
+            "page": "1",
+            "type": "datetime",
+            "value": "05/12/2024",
+            "accuracyRate": null
+          },
+          {
+            "code": "billing_items",
+            "page": "1",
+            "type": "array",
+            "value": [
+              {
+                "code": "billing_item",
+                "page": null,
+                "type": "array",
+                "value": [
+                  {
+                    "code": "billing_code",
+                    "page": "1",
+                    "type": "string",
+                    "value": "1.1.1",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "billing_desc",
+                    "page": "1",
+                    "type": "string",
+                    "value": "ค่าห้องเดี่ยว",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "total_amout",
+                    "page": "1",
+                    "type": "decimal",
+                    "value": "7000.00",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "discount",
+                    "page": "1",
+                    "type": "decimal",
+                    "value": "0.00",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "policy_covered",
+                    "page": "1",
+                    "type": "string",
+                    "value": "7000.00",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "policy_not_covered",
+                    "page": "1",
+                    "type": "string",
+                    "value": "0.00",
+                    "accuracyRate": null
+                  }
+                ],
+                "accuracyRate": null
+              },
+              {
+                "code": "billing_item",
+                "page": null,
+                "type": "array",
+                "value": [
+                  {
+                    "code": "billing_code",
+                    "page": "1",
+                    "type": "string",
+                    "value": "1.1.2",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "billing_desc",
+                    "page": "1",
+                    "type": "string",
+                    "value": "ค่าใช้จ่ายทั่วไปในโรงพยาบาล",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "total_amout",
+                    "page": "1",
+                    "type": "decimal",
+                    "value": "21805.75",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "discount",
+                    "page": "1",
+                    "type": "decimal",
+                    "value": "0.00",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "policy_covered",
+                    "page": "1",
+                    "type": "string",
+                    "value": "21805.75",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "policy_not_covered",
+                    "page": "1",
+                    "type": "string",
+                    "value": "0.00",
+                    "accuracyRate": null
+                  }
+                ],
+                "accuracyRate": null,
+                "grouporder_items": [
+                  {
+                    "code": "billing_item",
+                    "page": null,
+                    "type": "array",
+                    "value": [
+                      {
+                        "code": "billing_code",
+                        "page": "1",
+                        "type": "string",
+                        "value": "1.1.3",
+                        "accuracyRate": null
+                      },
+                      {
+                        "code": "billing_desc",
+                        "page": "1",
+                        "type": "string",
+                        "value": "รวม",
+                        "accuracyRate": null
+                      },
+                      {
+                        "code": "total_amout",
+                        "page": "1",
+                        "type": "decimal",
+                        "value": "28805.75",
+                        "accuracyRate": null
+                      },
+                      {
+                        "code": "discount",
+                        "page": "1",
+                        "type": "decimal",
+                        "value": "0.00",
+                        "accuracyRate": null
+                      },
+                      {
+                        "code": "policy_covered",
+                        "page": "1",
+                        "type": "string",
+                        "value": "28805.75",
+                        "accuracyRate": null
+                      },
+                      {
+                        "code": "policy_not_covered",
+                        "page": "1",
+                        "type": "string",
+                        "value": "0.00",
+                        "accuracyRate": null
+                      }
+                    ],
+                    "accuracyRate": null,
+                    "order_items": [
+                      {
+                        "code": "billing_item",
+                        "page": null,
+                        "type": "array",
+                        "value": [
+                          {
+                            "code": "billing_code",
+                            "page": "1",
+                            "type": "string",
+                            "value": "-",
+                            "accuracyRate": null
+                          },
+                          {
+                            "code": "billing_desc",
+                            "page": "1",
+                            "type": "string",
+                            "value": "ยา",
+                            "accuracyRate": null
+                          },
+                          {
+                            "code": "total_amout",
+                            "page": "1",
+                            "type": "decimal",
+                            "value": "0.00",
+                            "accuracyRate": null
+                          },
+                          {
+                            "code": "discount",
+                            "page": "1",
+                            "type": "decimal",
+                            "value": "0.00",
+                            "accuracyRate": null
+                          },
+                          {
+                            "code": "policy_covered",
+                            "page": "1",
+                            "type": "string",
+                            "value": "0.00",
+                            "accuracyRate": null
+                          },
+                          {
+                            "code": "policy_not_covered",
+                            "page": "1",
+                            "type": "string",
+                            "value": "0.00",
+                            "accuracyRate": null
+                          }
+                        ],
+                        "accuracyRate": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "code": "billing_item",
+                "page": null,
+                "type": "array",
+                "value": [
+                  {
+                    "code": "billing_code",
+                    "page": null,
+                    "type": "string",
+                    "value": "",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "billing_desc",
+                    "page": null,
+                    "type": "string",
+                    "value": "รวม",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "total_amout",
+                    "page": null,
+                    "type": "decimal",
+                    "value": "28805.75",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "discount",
+                    "page": null,
+                    "type": "decimal",
+                    "value": "0.00",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "policy_covered",
+                    "page": null,
+                    "type": "string",
+                    "value": "28805.75",
+                    "accuracyRate": null
+                  },
+                  {
+                    "code": "policy_not_covered",
+                    "page": null,
+                    "type": "string",
+                    "value": "0.00",
+                    "accuracyRate": null
+                  }
+                ],
+                "accuracyRate": null
+              }
+            ],
+            "accuracyRate": null
+          },
+          {
+            "code": "non_cover",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "over_paid",
+            "page": "1",
+            "type": "decimal",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "copayment",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "received_document_date",
+            "page": "1",
+            "type": "datetime",
+            "value": "05/12/2024",
+            "accuracyRate": null
+          },
+          {
+            "code": "request_document_date",
+            "page": "1",
+            "type": "datetime",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "received_fully_document_date",
+            "page": "1",
+            "type": "datetime",
+            "value": "05/12/2024",
+            "accuracyRate": null
+          },
+          {
+            "code": "axa_replied_to_hospital_date",
+            "page": "1",
+            "type": "datetime",
+            "value": "05/12/2024",
+            "accuracyRate": null
+          },
+          {
+            "code": "insured_signature",
+            "page": "1",
+            "type": "string",
+            "value": "น.ส.อัมพิกา เตียบัวแก้ว",
+            "accuracyRate": null
+          },
+          {
+            "code": "assessor_signature",
+            "page": "1",
+            "type": "string",
+            "value": "Matpodo phrcmสh(Iต))",
+            "accuracyRate": null
+          },
+          {
+            "code": "settlement_date",
+            "page": "1",
+            "type": "datetime",
+            "value": "-",
+            "accuracyRate": null
+          }
+        ],
+        "document_type": "Estimate Medical Expense report, GOP, guarantee email",
+        "need_correction": false
+      }
+    ],
+    "transaction_no": "TX1763533229064",
+    "summary": {
+      "fields_present": [
+        "admission_date",
+        "an",
+        "assessor_signature",
+        "axa_replied_to_hospital_date",
+        "certification_no",
+        "claim_no",
+        "copayment",
+        "discharge_date",
+        "family_no",
+        "fund_name",
+        "hn",
+        "hopital_fax",
+        "hospital_address",
+        "hospital_name",
+        "hospital_tel",
+        "insured_signature",
+        "non_cover",
+        "notification_no",
+        "over_paid",
+        "patient_fax",
+        "patient_name",
+        "plan_name",
+        "policyno",
+        "received_document_date",
+        "received_fully_document_date",
+        "request_document_date",
+        "settlement_date"
+      ],
+      "fields_missing_expected": [
+        "gross_amount",
+        "invoice_no",
+        "date_of_issue"
+      ],
+      "billing_items_count": 3
+    }
+  },
+  "error": null,
+  "timing": {
+    "processing_method": 0.0,
+    "ai_extraction_time": 0.0
+  },
+  "request_id": "4066f702-2a61-4aa7-9b07-51c7273f80b4"
+}

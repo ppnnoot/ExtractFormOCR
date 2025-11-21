@@ -1,0 +1,232 @@
+{
+  "success": true,
+  "data": {
+    "documents": [
+      {
+        "page": "1",
+        "total_page": "1",
+        "document_code": "HL0000055",
+        "document_info": [
+          {
+            "code": "hospital_name",
+            "page": "1",
+            "type": "string",
+            "value": "โรงพยาบาลรวมแพทย์ฉะเชิงเทรา",
+            "accuracyRate": null
+          },
+          {
+            "code": "provider_address",
+            "page": "1",
+            "type": "string",
+            "value": "88/122-123 หมู่ที่ 13 ถนนฉะเชิงเทรา-พนมสารคาม ตำบลบางตีนเป็ด อำเภอเมืองฉะเชิงเทรา จังหวัดฉะเชิงเทรา 24000",
+            "accuracyRate": null
+          },
+          {
+            "code": "tax_identification_number",
+            "page": "1",
+            "type": "string",
+            "value": "67-04-209",
+            "accuracyRate": null
+          },
+          {
+            "code": "fund_name",
+            "page": "1",
+            "type": "string",
+            "value": "บริษัท กรุงไทย แอกซ่า ประกันชีวิต บมจ.",
+            "accuracyRate": null
+          },
+          {
+            "code": "patient_name",
+            "page": "1",
+            "type": "string",
+            "value": "นางสาวพิมพ์ประภา พิมพิสอน",
+            "accuracyRate": null
+          },
+          {
+            "code": "policy_no",
+            "page": "1",
+            "type": "string",
+            "value": "CI670400301",
+            "accuracyRate": null
+          },
+          {
+            "code": "vn",
+            "page": "1",
+            "type": "string",
+            "value": "16/04/2567",
+            "accuracyRate": null
+          },
+          {
+            "code": "hn",
+            "page": "1",
+            "type": "string",
+            "value": "630600173",
+            "accuracyRate": null
+          },
+          {
+            "code": "an",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "billing_number",
+            "page": "1",
+            "type": "string",
+            "value": "T00010800",
+            "accuracyRate": null
+          },
+          {
+            "code": "billing_date",
+            "page": "1",
+            "type": "string",
+            "value": "1/5/2024",
+            "accuracyRate": null
+          },
+          {
+            "code": "due_date",
+            "page": "1",
+            "type": "string",
+            "value": "13 MAY 2024",
+            "accuracyRate": null
+          },
+          {
+            "code": "admission_date",
+            "page": "1",
+            "type": "string",
+            "value": "16/04/2567",
+            "accuracyRate": null
+          },
+          {
+            "code": "discharge_date",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "visit_date",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "total_admitted_date",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "treatment_detail",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "invoice_no",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "total_invoice_amount",
+            "page": "1",
+            "type": "decimal",
+            "value": "231226.66",
+            "accuracyRate": null
+          },
+          {
+            "code": "bank",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "account_number",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "billing_name",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "billing_signature",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "cashier_signature",
+            "page": "1",
+            "type": "string",
+            "value": "-",
+            "accuracyRate": null
+          },
+          {
+            "code": "settlement_date_and_time",
+            "page": "1",
+            "type": "string",
+            "value": "13 MAY 2024",
+            "accuracyRate": null
+          }
+        ],
+        "document_type": "Statement from Hospital",
+        "need_correction": null
+      }
+    ],
+    "transaction_no": "TX1763532110829",
+    "summary": {
+      "fields_present": [
+        "account_number",
+        "admission_date",
+        "an",
+        "bank",
+        "billing_date",
+        "billing_name",
+        "billing_number",
+        "billing_signature",
+        "cashier_signature",
+        "discharge_date",
+        "due_date",
+        "fund_name",
+        "hn",
+        "hospital_name",
+        "invoice_no",
+        "patient_name",
+        "policy_no",
+        "provider_address",
+        "settlement_date_and_time",
+        "tax_identification_number",
+        "total_admitted_date",
+        "total_invoice_amount",
+        "treatment_detail",
+        "visit_date",
+        "vn"
+      ],
+      "fields_missing_expected": [
+        "gross_amount",
+        "date_of_issue"
+      ],
+      "billing_items_count": 0
+    }
+  },
+  "error": null,
+  "timing": {
+    "processing_method": 0.0,
+    "ai_extraction_time": 0.0
+  },
+  "request_id": "c35394a1-7384-4d94-9a7c-67978a363679"
+}
