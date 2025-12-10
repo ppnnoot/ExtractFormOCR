@@ -25,6 +25,7 @@ from contextlib import asynccontextmanager
 
 # Import our pipeline and security
 from ai_simple_extraction import TwoStepAIPipeline
+from ai_extraction import AIExtractor
 from document_classifier import DocumentClassifier
 from multi_ocr_adapter import MultiOCRManager
 from security_module import (
@@ -142,7 +143,7 @@ def build_simple_summary(formatted_data: Dict[str, Any]) -> Dict[str, Any]:
 # Lifespan: initialize shared resources on startup and cleanup on shutdown
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global pipeline, classifier, auth_manager, ocr_adapter
+    global pipeline, ai_extractor, classifier, auth_manager, ocr_adapter
     try:
         # Initialize synchronous components - FastAPI will handle this properly
         logger.info("Initializing components in lifespan...")
@@ -150,6 +151,10 @@ async def lifespan(app: FastAPI):
         # Initialize pipeline
         pipeline = TwoStepAIPipeline('config.json')
         logger.info("Two-Step AI Pipeline initialized successfully")
+
+        # Initialize AI Extractor (V2)
+        ai_extractor = AIExtractor(config)
+        logger.info("AI Extractor V2 initialized successfully")
 
         # Initialize OCR adapter
         ocr_adapter = MultiOCRManager(config)
@@ -183,6 +188,7 @@ async def lifespan(app: FastAPI):
             classifier = None
             auth_manager = None
             pipeline = None
+            ai_extractor = None
         except Exception as e:
             logger.warning(f"Cleanup error: {e}")
 
@@ -276,6 +282,7 @@ async def rate_limit_middleware(request: Request, call_next):
 
 # Initialize pipeline, classifier, and security
 pipeline = None
+ai_extractor = None
 classifier = None
 auth_manager = None
 ocr_adapter = None
@@ -965,6 +972,55 @@ async def extract_from_text(request: Request, input_data: OCRTextInput = Body(..
             request_meta={'form_id': input_data.form_id, 'ocr_texts_count': len(input_data.ocr_texts), 'mode': 'error'}
         )
         return resp
+
+
+@app.post("/v2/extract/text")
+async def extract_text_v2(input_data: OCRTextInput = Body(...)):
+    """
+    Raw AI Extraction V2
+    
+    Sends raw OCR text to AI and returns the raw content string.
+    No parsing, no formatting, just pure AI response.
+    
+    Args:
+        input_data: OCRTextInput with list of OCR texts and Form ID
+        
+    Returns:
+        Dictionary containing raw AI content
+    """
+    if not ai_extractor:
+        raise HTTPException(status_code=503, detail="AI Extractor V2 not initialized")
+        
+    # Validate inputs
+    if not input_data.ocr_texts:
+        raise HTTPException(status_code=422, detail="ocr_texts is required")
+        
+    # Combine OCR texts
+    combined_text = "\n".join(input_data.ocr_texts)
+    
+    try:
+        logger.info(f"📤 Sending raw text to AI V2 (length: {len(combined_text)}) with form_id: {input_data.form_id}")
+        content, usage = await ai_extractor.extract(combined_text, form_id=input_data.form_id)
+        
+        if content:
+            return {
+                "success": True,
+                "data": content,
+                "token_usage": usage,
+                "request_id": str(uuid.uuid4())
+            }
+        else:
+            return {
+                "success": False,
+                "error": "AI returned empty response"
+            }
+            
+    except Exception as e:
+        logger.error(f"Error in V2 extraction: {e}", exc_info=True)
+        return {
+            "success": False,
+            "error": str(e)
+        }
 
 
 @app.post("/classify", response_model=ClassificationResponse)

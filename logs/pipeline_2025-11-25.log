@@ -1,0 +1,30 @@
+2025-11-25 09:11:39,497 - __main__ - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-25 09:11:39,498 - __main__ - INFO - 📁 Log directory: ./logs
+2025-11-25 09:11:39,498 - __main__ - INFO - 📅 Max retention: 30 days
+2025-11-25 09:11:40,017 - api_server - INFO - 🚀 API Server logging initialized with rotation and cleanup
+2025-11-25 09:11:40,017 - api_server - INFO - 📁 Log directory: ./logs
+2025-11-25 09:11:40,017 - api_server - INFO - 📅 Max retention: 30 days
+2025-11-25 09:11:40,065 - api_server - INFO - Initializing components in lifespan...
+2025-11-25 09:11:40,066 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-25 09:11:40,066 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-25 09:11:40,067 - api_server - INFO - Two-Step AI Pipeline initialized successfully
+2025-11-25 09:11:40,067 - api_server - INFO - AI Extractor V2 initialized successfully
+2025-11-25 09:11:40,067 - multi_ocr_adapter - INFO - Initialized OCR engines: ['oneocr']
+2025-11-25 09:11:40,067 - api_server - INFO - Multi-OCR Manager initialized: ['oneocr']
+2025-11-25 09:11:40,067 - template_api_manager - INFO - TemplateAPIManager initialized (API: https://ocr.rg.in.th/uapi/api/KOConfiguration-GetFormId, Cache: True)
+2025-11-25 09:11:40,067 - document_classifier - INFO - Loading document types from Template API...
+2025-11-25 09:11:40,067 - template_api_manager - INFO - Fetching all templates from API
+2025-11-25 09:11:40,075 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ocr.rg.in.th:443
+2025-11-25 09:11:40,380 - urllib3.connectionpool - DEBUG - https://ocr.rg.in.th:443 "POST /uapi/api/KOConfiguration-GetFormId HTTP/1.1" 200 None
+2025-11-25 09:11:40,381 - template_api_manager - DEBUG - Parsed template: HL0000055 - Statement from Hospital
+2025-11-25 09:11:40,381 - template_api_manager - DEBUG - Parsed template: HL0000043 - Other medical document
+2025-11-25 09:11:40,382 - template_api_manager - DEBUG - Parsed template: HL0000053 - Detail of invoice
+2025-11-25 09:11:40,382 - template_api_manager - DEBUG - Parsed template: HL0000050 - Receipt-Bill
+2025-11-25 09:11:40,382 - template_api_manager - DEBUG - Parsed template: HL0000051 - E-Receipt
+2025-11-25 09:11:40,382 - template_api_manager - DEBUG - Parsed template: HL0000054 - Estimate Medical Expense report, GOP, guarantee email
+2025-11-25 09:11:40,382 - template_api_manager - DEBUG - Parsed template: HL0000052 - Invoice
+2025-11-25 09:11:40,382 - template_api_manager - INFO - Fetched 7 templates from API
+2025-11-25 09:11:40,384 - document_classifier - INFO - Loaded 7 document types from API: ['B07_STATEMENT', 'HL0000043_UNKNOWN', 'B05_HOSPITAL_DETAIL', 'B01_RECEIPT', 'HL0000051_UNKNOWN', 'B06_ESTIMATE_GOP', 'B04_INVOICE']
+2025-11-25 09:11:40,384 - api_server - INFO - Document Classifier initialized successfully
+2025-11-25 09:11:40,384 - api_server - INFO - Authentication Manager initialized successfully
+2025-11-25 09:11:40,384 - security_module - INFO - SECURITY: SYSTEM_STARTUP - {'timestamp': '2025-11-25T09:11:40.384762'}

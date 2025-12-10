@@ -609,6 +609,29 @@ CRITICAL BUSINESS RULES:
         else:
             rules.insert(0, "- Exclude totals: รวม, ยอดรวม, สุทธิ, total, summary (billing section)")
 
+        example_block = """
+Example Input:
+โรงพยาบาลตัวอย่าง (Sample Hospital)
+HN: 12-34-5678  Date: 01/01/2024
+1.1.1 ค่ายาและสารอาหารทางเส้นเลือด  1,500.00
+  1.1.1(1) ค่ายาผู้ป่วยใน  1,000.00
+    - Paracetamol 500mg 10 tabs  20.00
+    - Amoxicillin 500mg 20 caps  100.00
+  1.1.1(2) ยากลับบ้าน  500.00
+    - Vitamin C 1000mg 30 tabs  150.00
+
+Example Output:
+[K] hospital_name | โรงพยาบาลตัวอย่าง
+[K] hn | 12-34-5678
+[K] admission_date | 01/01/2024
+[L1] 1.1.1 | ค่ายาและสารอาหารทางเส้นเลือด | 1500.00 | 0.00 | 1500.00
+[L2] 1.1.1(1) | ค่ายาผู้ป่วยใน | 1000.00 | 0.00 | 1000.00
+[L3] Paracetamol 500mg | 10 | 20.00 | 0.00 | 20.00
+[L3] Amoxicillin 500mg | 20 | 100.00 | 0.00 | 100.00
+[L2] 1.1.1(2) | ยากลับบ้าน | 500.00 | 0.00 | 500.00
+[L3] Vitamin C 1000mg | 30 | 150.00 | 0.00 | 150.00
+"""
+
         return (
             "Extract billing lines and header fields from the OCR text and return ONLY a compact simple list.\n\n"
             "Header format: \n"
@@ -617,6 +640,7 @@ CRITICAL BUSINESS RULES:
             "[L1] code | desc | amount | discount | net\n"
             "[L2] code | desc | amount | discount | net\n"
             "[L3] item_desc | quantity | amount | discount | net\n\n"
+            f"{example_block}\n\n"
             f"Header Keys: {top_keys}\n\n"
             "Rules:\n" + "\n".join(rules) + "\n\n" +
             "OCR Text:\n" + ocr_text
