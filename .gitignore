@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.local
+
+# Configuration (contains secrets)
+config.json
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+log.html
+report.html
+
+# Output data
+output/
+
+# Binary / Large files / Proprietary
+*.dll
+*.onemodel
+*.onnx
+models/
+libs/
+oneocr.dll
+oneocr.onemodel
+onnxruntime.dll
+
+# System
+.DS_Store

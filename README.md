@@ -55,7 +55,12 @@ ExtractForm/
 
 ### 3. Configuration
 
-แก้ไข `config.json` ตามความต้องการ:
+1. Copy the example configuration file:
+   ```bash
+   cp config.json.example config.json
+   ```
+
+2. Edit `config.json` to add your API keys and configuration:
 
 ```json
 {
@@ -71,8 +76,9 @@ ExtractForm/
   },
   "ai_extraction": {
     "api": {
-      "endpoint": "http://10.5.19.205:8080/v1/chat/completions",
-      "model": "openai/gpt-oss-20b"
+      "endpoint": "http://your-api-endpoint/v1/chat/completions",
+      "model": "your-model-name",
+      "auth_token": "your-api-key"
     }
   }
 }

@@ -1,9 +1,0 @@
-[K] hospital_name | คลินิกแพทย์ศิรินนท์  
-[K] receipt_no | 004  
-[K] receipt_date | 5 มค 2565  
-[K] patient_name | ณชมน มเผา  
-[K] total_amount_in_writing | 150  
-[K] cashier_name | ภยักร  
-[K] visit_date | 5 มค 2565  
-[L1] 1.1.1 | ค่ายา | 150 | - | 150  
-[L3] 150 กับฉยับ | 1 | 150 | - | 150
